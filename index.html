@@ -564,10 +564,10 @@ button{font-family:inherit;cursor:pointer}
       <div class="sec">
         <div class="lbl" style="color:var(--blue)">Conservative forecast · bookings this plan delivers</div>
         <div class="g4">
-          <div class="fc"><div class="q">This quarter · 15 Oct – 31 Dec</div><div class="v" id="s-q3">6 <small>bookings</small></div><p id="s-q3v">≈ ₹23 Cr booked</p></div>
-          <div class="fc"><div class="q">Next quarter · Jan – Mar 2027</div><div class="v" id="s-q4">13 <small>bookings</small></div><p id="s-q4v">≈ ₹47 Cr booked, with the OC in hand</p></div>
+          <div class="fc"><div class="q">This quarter · 15 Oct – 31 Dec</div><div class="v" id="s-q3">3 <small>bookings</small></div><p id="s-q3v">≈ ₹10 Cr booked, plus ~4 in the pipeline for Jan–Mar</p></div>
+          <div class="fc"><div class="q">Next quarter · Jan – Mar 2027</div><div class="v" id="s-q4">11 <small>bookings</small></div><p id="s-q4v">≈ ₹40 Cr booked, with the OC in hand</p></div>
           <div class="fc" style="border-top-color:var(--senior)"><div class="q">Budget · two quarters</div><div class="v">₹1.32 Cr</div><p>₹60 L this quarter, ₹72 L next. Media, events, content and CRM.</p></div>
-          <div class="fc" style="border-top-color:var(--good)"><div class="q">Cost per booking · two quarters</div><div class="v" id="s-cpb">~₹7 L</div><p id="s-cpbp">about 1.9% of the ticket, below a 2–3% channel-partner brokerage</p></div>
+          <div class="fc" style="border-top-color:var(--good)"><div class="q">Cost per booking · two quarters</div><div class="v" id="s-cpb">~₹9.5 L</div><p id="s-cpbp">about 2.6% of the ticket, within a 2–3% brokerage, with ~6 more bookings in the pipeline</p></div>
         </div>
       </div>
       <div class="sec">
@@ -757,7 +757,7 @@ button{font-family:inherit;cursor:pointer}
     <div class="panel" role="tabpanel" id="p-budget" data-tab="budget" data-name="Budget" hidden>
       <div class="sec">
         <span class="tag d">E · Budget</span>
-        <h2>₹1.32 Cr over two quarters. Under 1% of the stock it sells.</h2>
+        <h2>₹1.32 Cr over two quarters. 0.73% of the homes left.</h2>
         <div class="g4">
           <div class="tile"><div class="v">₹60 L</div><p>this quarter, 15 Oct – 31 Dec (11 weeks)</p></div>
           <div class="tile"><div class="v">₹72 L</div><p>next quarter, Jan – Mar 2027, with the OC in hand</p></div>
@@ -775,7 +775,7 @@ button{font-family:inherit;cursor:pointer}
         <div class="g3">
           <div class="card" style="border-top:3px solid var(--good)"><h3>Local first</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">About 65% of buyers so far live in Gurugram. Meta in Gurugram and South/West Delhi, plus print and WhatsApp for seniors who trust the newspaper, take ~42% of the budget.</p></div>
           <div class="card" style="border-top:3px solid var(--blue)"><h3>NRI is a test that can scale</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">NRI cost per lead ranges ₹3,300–13,200 between vendors. We start at ₹12 L, read cost per site visit after four weeks, then scale or cut.</p></div>
-          <div class="card" style="border-top:3px solid var(--senior)"><h3>Referrals cost least</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">Events, the CK Birla MoU and an owner-referral programme take ~14%. They should deliver a quarter or more of bookings.</p></div>
+          <div class="card" style="border-top:3px solid var(--senior)"><h3>Referrals cost least</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">Events, the CK Birla MoU and an owner-referral programme take ~14%. They deliver about a fifth of bookings in this plan, and their share grows as owners move in.</p></div>
         </div>
       </div>
       <p class="src">Budget excludes Fixit's fee and channel-partner brokerage. Reallocated weekly inside the approved total on cost per site visit. Brokerage benchmark 2–3% for luxury (vendor sources); marketing spend rule of thumb 1–3% of sales value (unaudited). Remaining stock value at the weighted price list.</p>
@@ -790,6 +790,7 @@ button{font-family:inherit;cursor:pointer}
           <div class="seg-btn" role="group" aria-label="Scenario"><button type="button" data-sc="conservative" aria-pressed="true">Conservative</button><button type="button" data-sc="base" aria-pressed="false">Base</button></div>
           <div class="seg-btn" role="group" aria-label="Quarter"><button type="button" data-q="0" aria-pressed="true">This quarter · Oct–Dec</button><button type="button" data-q="1" aria-pressed="false">Next quarter · Jan–Mar</button></div>
         </div>
+        <div class="call bad"><b>Why this quarter is small.</b> The first two weeks go on fixes, not ads. New campaigns cost more while they learn. There's no OC yet and the service charge is unpublished. And families take months to decide. Most of what Oct–Dec spend generates closes in Jan–Mar.</div>
         <div class="res" id="res"></div>
         <div class="g2" style="grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)">
           <div class="card"><h3>The funnel</h3><p class="cap" id="fcap"></p><div class="funnel" id="funnel" style="margin-top:12px"></div></div>
@@ -804,7 +805,7 @@ button{font-family:inherit;cursor:pointer}
         <div class="card" style="overflow-x:auto">
           <table class="bt bench"><thead><tr><th>Assumption</th><th class="n">Conservative</th><th class="n">Base</th><th>Market range</th></tr></thead><tbody id="atable"></tbody></table>
         </div>
-        <div class="call" style="background:var(--surface-2)">Conservative means the top of the cost ranges and the bottom of the conversion ranges, and only 65% of a quarter's bookings landing in that quarter. Senior-living decisions involve the parents and the children, so they run longer than the 15–30 days ANAROCK reports for ordinary homes. These are bookings sourced by this plan; channel-partner sales come on top.</div>
+        <div class="call" style="background:var(--surface-2)">Conservative means the top of the cost ranges, a learning-phase uplift in the first quarter, the bottom of the conversion ranges, and only 40% of this quarter's bookings (55% next quarter) landing in the quarter they're generated. Senior-living decisions involve the parents and the children, so they run longer than the 15–30 days ANAROCK reports for ordinary homes. These are bookings sourced by this plan; channel-partner sales come on top.</div>
       </div>
       <p class="src">Benchmarks: Meta cost per lead for luxury NCR ₹800–2,500 and Google ₹2,000–5,000 (Aarmus 2026; Leadproio Jul 2026); NRI Meta ₹3,300–13,200 (Aarmus, single vendor, to be tested); lead to site visit 8–15% and site visit to booking 10–25% (Upgrowth; Realatic Apr 2026; Leadproio); lead to booking ~1.3% (ANAROCK, derived). Average ticket ₹3.62 Cr at the weighted price list. Directional; replaced with Advait's CRM data in week 2.</p>
     </div>
@@ -823,7 +824,7 @@ button{font-family:inherit;cursor:pointer}
   function show(id,scroll){panels.forEach(p=>p.hidden=p.dataset.tab!==id);[...tl.children].forEach(t=>{const on=t.dataset.tab===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;if(on&&scroll)t.scrollIntoView({block:'nearest',inline:'center'});});try{history.replaceState(null,'','#'+id)}catch(e){}requestAnimationFrame(()=>placers.forEach(f=>f()));if(scroll){const top=$('#dash').getBoundingClientRect().top+window.scrollY;if(window.scrollY>top)window.scrollTo({top});}}
 
   /* jumps */
-  const J=[['market','Market','Gurugram just proved the category. Advait is the only licensed senior home in Gurugram with keys before 2030.','var(--good)'],['compete','Competitors','Antara is loudest. Nobody in NCR talks to NRI children. Advait\'s own ads barely run.','var(--bad)'],['buyers','Buyers','Local seniors are the core; children and NRIs are the growth. Four of six families weigh care most.','#9A6B12'],['plan','Plan of action','Fix, build, sell the OC, then keys and referrals. Five documents clear 46% of red-flag risk.','var(--blue)'],['budget','Budget','₹1.32 Cr over two quarters, under 1% of the stock it sells.','var(--senior)'],['funnel','Funnel & forecast','Conservative: ~19 bookings by March. Switch to base, or to either quarter.','var(--ink)']];
+  const J=[['market','Market','Gurugram just proved the category. Advait is the only licensed senior home in Gurugram with keys before 2030.','var(--good)'],['compete','Competitors','Antara is loudest. Nobody in NCR talks to NRI children. Advait\'s own ads barely run.','var(--bad)'],['buyers','Buyers','Local seniors are the core; children and NRIs are the growth. Four of six families weigh care most.','#9A6B12'],['plan','Plan of action','Fix, build, sell the OC, then keys and referrals. Five documents clear 46% of red-flag risk.','var(--blue)'],['budget','Budget','₹1.32 Cr over two quarters: 0.73% of the ~₹181 Cr of homes left.','var(--senior)'],['funnel','Funnel & forecast','Conservative: ~3 this quarter, ~11 next, most after the OC. Switch to base, or to either quarter.','var(--ink)']];
   $('#jumps').innerHTML=J.map(([id,t,p,c])=>`<button class="jump" type="button" data-go="${id}" style="--jc:${c}"><span class="t">${t}<span>Open →</span></span><p>${p}</p></button>`).join('');
   document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go,true)));
 
@@ -905,19 +906,19 @@ button{font-family:inherit;cursor:pointer}
     {k:'content',n:'Content, CRM & retargeting',d:'Walk-through and care-desk films, service-charge explainer, WhatsApp CRM',col:'p2',b:[8,7]},
   ];
   const SC={
-    conservative:{cpl:{meta:2500,google:4500,nri:7000},lq:.20,qv:.30,vb:[.10,.12],pr:[.40,.35,[.12,.14]],rf:[.55,.45,[.18,.22]],close:.65},
-    base:{cpl:{meta:2000,google:4000,nri:6000},lq:.22,qv:.33,vb:[.11,.13],pr:[.42,.38,[.13,.15]],rf:[.58,.48,[.20,.24]],close:.70},
+    conservative:{cpl:{meta:2500,google:4500,nri:7000},learn:[1.15,1],lq:.20,qv:.30,vb:[.08,.10],pr:[.40,.35,[.10,.11]],rf:[.55,.45,[.15,.18]],close:[.40,.55]},
+    base:{cpl:{meta:2000,google:4000,nri:6000},learn:[1.10,1],lq:.22,qv:.33,vb:[.10,.12],pr:[.42,.38,[.12,.14]],rf:[.58,.48,[.18,.22]],close:[.50,.65]},
   };
   const colOf=c=>c==='cyanx'?'#0E7490':css(c);
   function run(sn){
     const s=SC[sn];let carry=0;const out=[];
     [0,1].forEach(q=>{
       const rows=CH.map(c=>{let l=0,ql=0,v=0,b=0;
-        if(c.paid){l=c.b[q]*1e5/s.cpl[c.paid];ql=l*s.lq;v=ql*s.qv;b=v*s.vb[q];}
+        if(c.paid){l=c.b[q]*1e5/(s.cpl[c.paid]*s.learn[q]);ql=l*s.lq;v=ql*s.qv;b=v*s.vb[q];}
         else if(c.off){const r=c.k==='print'?s.pr:s.rf;l=c.off[q];ql=l*r[0];v=ql*r[1];b=v*r[2][q];}
         return {c,spend:c.b[q],l,ql,v,b};});
       const T=rows.reduce((a,r)=>({spend:a.spend+r.spend,l:a.l+r.l,ql:a.ql+r.ql,v:a.v+r.v,b:a.b+r.b}),{spend:0,l:0,ql:0,v:0,b:0});
-      const closed=T.b*s.close+carry; carry=T.b*(1-s.close);
+      const closed=T.b*s.close[q]+carry; carry=T.b*(1-s.close[q]);
       out.push({rows,T,closed,carryOut:carry});
     });
     return out;
@@ -931,7 +932,7 @@ button{font-family:inherit;cursor:pointer}
     $('#bstack').innerHTML=CH.map(c=>{const p=(c.b[0]+c.b[1])/(t1+t2)*100;return `<div style="flex:0 0 calc(${p}% - 2px);background:${colOf(c.col)}" title="${c.n}">${p>=9?Math.round(p)+'%':''}</div>`}).join('');
   })();
   /* assumptions table */
-  const A=[['Meta cost per lead · India','₹2,500','₹2,000','₹800–2,500 luxury NCR'],['Google cost per lead','₹4,500','₹4,000','₹2,000–5,000 Gurgaon luxury'],['NRI cost per lead (Meta/YouTube)','₹7,000','₹6,000','₹3,300–13,200 UAE (to test)'],['Lead → qualified','20%','22%','—'],['Qualified → site visit','30%','33%','lead → visit 8–15%'],['Site visit → booking (Oct–Dec / Jan–Mar)','10% / 12%','11% / 13%','10–25%'],['Referral visit → booking','18% / 22%','20% / 24%','referral leads convert 8–15% end to end'],['Share of bookings closing in the same quarter','65%','70%','senior-living cycles run long'],['Average ticket','₹3.62 Cr','₹3.62 Cr','weighted price list']];
+  const A=[['Meta cost per lead · India','₹2,500','₹2,000','₹800–2,500 luxury NCR'],['Google cost per lead','₹4,500','₹4,000','₹2,000–5,000 Gurgaon luxury'],['NRI cost per lead (Meta/YouTube)','₹7,000','₹6,000','₹3,300–13,200 UAE (to test)'],['Learning-phase cost uplift, Oct–Dec','+15%','+10%','new campaigns, first weeks'],['Lead → qualified','20%','22%','—'],['Qualified → site visit','30%','33%','lead → visit 8–15%'],['Site visit → booking (Oct–Dec / Jan–Mar)','8% / 10%','10% / 12%','10–25%; low end before the OC'],['Referral visit → booking','15% / 18%','18% / 22%','referral leads convert 8–15% end to end'],['Bookings closing in the same quarter (Oct–Dec / Jan–Mar)','40% / 55%','50% / 65%','US senior living: 120–315 days lead to move-in'],['Average ticket','₹3.62 Cr','₹3.62 Cr','weighted price list']];
   $('#atable').innerHTML=A.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td><td class="n">${r[2]}</td><td style="color:var(--muted)">${r[3]}</td></tr>`).join('');
 
   let SCN='conservative',QI=0;
@@ -955,7 +956,7 @@ button{font-family:inherit;cursor:pointer}
     $('#ctable').innerHTML=`<thead><tr><th>Channel</th><th class="n">Spend</th><th class="n">Enquiries</th><th class="n">Site visits</th><th class="n">Bookings</th><th class="n">Cost / visit</th></tr></thead><tbody>`+
       q.rows.filter(r=>r.l>0).map(r=>`<tr><td><span class="sw" style="background:${colOf(r.c.col)}"></span>${r.c.n}</td><td class="n">₹${r.spend} L</td><td class="n">${fmt(r.l)}</td><td class="n">${r.v.toFixed(0)}</td><td class="n">${r.b.toFixed(1)}</td><td class="n">₹${fmt(r.spend*1e5/r.v)}</td></tr>`).join('')+
       `<tr class="tot"><td>Total (incl. content & CRM)</td><td class="n">₹${T.spend} L</td><td class="n">${fmt(T.l)}</td><td class="n">${T.v.toFixed(0)}</td><td class="n">${T.b.toFixed(1)}</td><td class="n">₹${fmt(T.spend*1e5/T.v)}</td></tr></tbody>`;
-    if(SCN==='conservative'){ $('#s-q3').innerHTML=`${b1} <small>bookings</small>`; $('#s-q3v').textContent=`≈ ₹${Math.round(R[0].closed*AVG)} Cr booked`; $('#s-q4').innerHTML=`${b2} <small>bookings</small>`; $('#s-q4v').textContent=`≈ ₹${Math.round(R[1].closed*AVG)} Cr booked, with the OC in hand`; const cpb=spend/(R[0].closed+R[1].closed); $('#s-cpb').textContent=`~₹${cpb.toFixed(0)} L`; $('#s-cpbp').textContent=`about ${(cpb/(AVG*100)*100).toFixed(1)}% of the ticket, below a 2–3% channel-partner brokerage`; }
+    if(SCN==='conservative'){ $('#s-q3').innerHTML=`${b1} <small>bookings</small>`; $('#s-q3v').textContent=`≈ ₹${Math.round(R[0].closed*AVG)} Cr booked, plus ~${Math.round(R[0].carryOut)} in the pipeline for Jan–Mar`; $('#s-q4').innerHTML=`${b2} <small>bookings</small>`; $('#s-q4v').textContent=`≈ ₹${Math.round(R[1].closed*AVG)} Cr booked, with the OC in hand`; const cpb=spend/(R[0].closed+R[1].closed); $('#s-cpb').textContent=`~₹${cpb.toFixed(1)} L`; $('#s-cpbp').textContent=`about ${(cpb/(AVG*100)*100).toFixed(1)}% of the ticket, within a 2–3% brokerage, with ~${Math.round(R[1].carryOut)} more bookings in the pipeline`; }
   }
   document.querySelectorAll('[data-sc]').forEach(b=>b.addEventListener('click',()=>{SCN=b.dataset.sc;document.querySelectorAll('[data-sc]').forEach(x=>x.setAttribute('aria-pressed',x===b));render();}));
   document.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{QI=+b.dataset.q;document.querySelectorAll('[data-q]').forEach(x=>x.setAttribute('aria-pressed',x===b));render();}));
