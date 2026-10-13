@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Fixit project analysis: Advait go-to-market plan, budget and forecast for the promoter.">
+<title>Advait Growth Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+
+/* Layout: Fixit look — white page, near-black chrome (logo, tabs, buttons, banners); colour lives on boxes and charts using the Estate 361 site palette: green = family / strength, amber = Antara, red = problem, blue = Max. Serif headlines, Inter body. */
+:root{
+  color-scheme:light;
+  --bg:#FFFFFF; --surface:#FFFFFF; --surface-2:#F8F6F0; --line:#ECEAE4; --track:#ECE9E1;
+  --ink:#18181B; --ink-2:#3F3F46; --muted:#5F6368; --head:#18181B;
+  --brand:#18181B; --brand-strong:#18181B; --brand-soft:#F4F4F5; --cyan:#9A6B12;
+  --navy:#18181B; --navy-2:#27272A; --on-navy:#FFFFFF; --on-navy-2:#A1A1AA;
+  --hero:#18181B;
+  --forest:#18181B; --on-forest:#FFFFFF; --on-forest-2:#A1A1AA;
+  --family:#0F8A64; --family-soft:#E4F2EC; --senior:#B8730A; --senior-soft:#F7ECDA;
+  --good:#0F8A64; --good-soft:#E4F2EC; --bad:#D64545; --bad-soft:#FBE5E5;
+  --blue:#2563EB; --blue-soft:#EBF1FE;
+  --max:#2563EB; --broker:#D64545; --other:#CDC9BF; --grey:#A8A49B; --tab-on:#18181B;
+  --hatch:#D64545;
+  --p1:#0F8A64; --p2:#18181B; --p3:#B8730A; --p4:#2563EB; --p5:#7C3AED; --p6:#8A6440;
+  --display:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --r:14px;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:0 56px}
+h1,h2,h3{font-family:var(--display);color:var(--head);font-weight:600;letter-spacing:-.01em;text-wrap:balance;margin:0}
+p{margin:0}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--max);outline-offset:2px;border-radius:6px}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{width:32px;height:32px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.brand .logo svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.brand b{font-family:var(--body);font-size:21px;font-weight:800;letter-spacing:-.02em;color:var(--head)}
+.brand span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-left:10px;border-left:1px solid var(--line)}
+.top .meta{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right}
+
+/* landing */
+.land{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;padding-block:56px 24px;align-items:start}
+.land h1{font-size:clamp(34px,5vw,54px);line-height:1.05}
+.land .lede{font-size:17px;color:var(--ink-2);margin-top:16px;max-width:52ch}
+.gets{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px}
+.gets div{display:flex;gap:10px;align-items:baseline;font-size:14px;color:var(--ink-2);padding-block:6px;border-top:1px solid var(--line)}
+.gets b{font-family:var(--mono);font-size:11px;color:var(--muted);font-weight:600;min-width:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 1px 2px rgba(20,30,25,.05)}
+.cover{border-radius:12px;background:var(--hero);color:var(--on-forest);padding:24px 22px;position:relative;overflow:hidden}
+.cover .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--on-forest-2)}
+.cover .n{font-family:var(--display);font-size:40px;font-weight:600;letter-spacing:-.01em;line-height:1;margin-top:14px}
+.cover .d{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;margin-top:12px;color:var(--on-forest-2)}
+.cover svg{position:absolute;right:-20px;bottom:-30px;opacity:.16}
+.pmeta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.pmeta div{background:var(--surface-2);border-radius:10px;padding:10px 12px}
+.pmeta b{display:block;font-family:var(--display);font-size:20px;font-weight:600;color:var(--head)}
+.pmeta span{font-size:12px;color:var(--muted)}
+.srcs{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.srcs span{font-size:11.5px;padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2)}
+.go{margin-top:20px;width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 18px;border:0;border-radius:12px;background:var(--brand-strong);color:#fff;font-size:16px;font-weight:600;transition:transform .15s ease,filter .15s ease}
+.go:hover{filter:brightness(1.12)} .go:active{transform:translateY(1px)}
+.go[disabled]{opacity:.7;cursor:progress}
+.steps{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px}
+.steps li{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+.steps .dot{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;border:1.5px solid var(--line);flex:0 0 22px}
+.steps li.run{color:var(--ink)} .steps li.run .dot{border-color:var(--brand);border-top-color:transparent;animation:spin .8s linear infinite}
+.steps li.done{color:var(--ink)} .steps li.done .dot{background:var(--brand-strong);border-color:var(--brand-strong);color:#fff}
+@keyframes spin{to{transform:rotate(360deg)}}
+.note-sm{font-size:12px;color:var(--muted);margin-top:12px}
+
+/* dashboard header + tabs */
+.dhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px;padding-block:28px 18px}
+.dhead h1{font-size:clamp(28px,4vw,40px)}
+.dhead .sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.ghost{background:transparent;border:1px solid var(--line);color:var(--ink-2);border-radius:999px;padding:8px 14px;font-size:13px}
+.ghost:hover{border-color:var(--muted)}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-20px;padding-inline:20px}
+.tabs .row{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-block:8px}
+.tabs .row::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:0;background:transparent;color:var(--muted);padding:9px 14px;border-radius:999px;font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.tab .n{font-family:var(--mono);font-size:11px;opacity:.75}
+.tab:hover{color:var(--ink);background:var(--surface-2)}
+.tab[aria-selected="true"]{background:var(--tab-on);color:#fff}
+.panel{padding-block:28px 0;display:grid;gap:22px}
+.sec{display:grid;gap:14px}
+.sec > h2{font-size:clamp(24px,3.2vw,34px);line-height:1.1}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:4px 9px;border-radius:5px;background:var(--navy);color:var(--on-navy);width:max-content}
+.tag.bad{background:var(--bad);color:#fff} .tag.c{background:#9A6B12;color:#fff} .tag.d{background:var(--blue);color:#fff}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;min-width:0}
+.card h3{font-family:var(--body);font-size:15.5px;font-weight:600;color:var(--ink)}
+.card .cap{font-size:12.5px;color:var(--muted);margin-top:2px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.g5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.src{font-size:11.5px;color:var(--muted);line-height:1.45;border-top:1px solid var(--line);padding-top:12px}
+
+/* tiles */
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;min-width:0}
+.tile .v{font-family:var(--display);font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:-.01em;line-height:1;color:var(--head)}
+.tile .v small{font-size:.5em;color:var(--muted);font-family:var(--body);font-weight:500;margin-left:3px}
+.tile p{font-size:13px;color:var(--ink-2);margin-top:8px}
+.tile.bad{border-top:3px solid var(--bad);background:linear-gradient(180deg,#FFF7F7,#FFFFFF 60%)}
+.tile.ok{background:var(--good-soft);border-color:#CDE6DA}
+.tile.ok .v{color:var(--good)}
+.problem{background:var(--bad-soft);border:1px solid #F3CFCF;border-left:6px solid var(--bad);border-radius:0 18px 18px 0;padding:26px 28px}
+.problem .lbl{color:var(--bad);font-weight:600}
+.problem h2{font-size:clamp(28px,4.4vw,48px);line-height:1.06;letter-spacing:-.01em;margin-top:10px}
+.problem p{font-size:17px;color:var(--ink-2);margin-top:12px;max-width:70ch}
+.problem p b{color:var(--ink)}
+.banner{background:var(--hero);color:var(--on-forest);border-radius:var(--r);padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px}
+.banner .big{font-family:var(--display);font-size:clamp(30px,4vw,44px);font-weight:600;letter-spacing:-.01em;line-height:1}
+.banner p{font-size:15px;color:var(--on-forest-2);max-width:62ch}
+.banner p b{color:var(--on-forest)}
+.strip{background:var(--blue-soft);color:#1E3A8A;border:1px solid #D3E0FC;border-radius:12px;padding:14px 18px;font-size:14.5px}
+.strip b{color:#1E40AF}
+.call{border-radius:12px;padding:14px 18px;font-size:14.5px}
+.call.bad{background:var(--bad-soft)} .call.bad b{color:var(--bad)}
+.call.ok{background:var(--good-soft)} .call.ok b{color:var(--good)}
+
+/* summary cards to tabs */
+.jump{display:flex;flex-direction:column;gap:8px;text-align:left;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--jc,var(--ink));border-radius:var(--r);padding:16px 18px;color:var(--ink);min-width:0;transition:border-color .15s ease,transform .15s ease}
+.jump:hover{border-color:var(--muted);transform:translateY(-1px)}
+.jump .t{font-weight:600;font-size:15px;display:flex;justify-content:space-between;gap:8px}
+.jump .t span{color:var(--muted);font-family:var(--mono);font-size:11px}
+.jump p{font-size:13.5px;color:var(--ink-2)}
+
+/* bars */
+.bars{display:grid;gap:9px;margin-top:12px}
+.br{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr) 54px;gap:12px;align-items:center;font-size:13.5px}
+.br .tr{height:10px;background:var(--track);border-radius:6px;position:relative;overflow:hidden}
+.br .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:var(--grey)}
+.br .val{font-family:var(--mono);font-weight:600;text-align:right;font-size:13px}
+.br.s .tr i{background:var(--good)} .br.w .tr i{background:var(--bad)}
+.br.me span:first-child{font-weight:600}
+.br.me .tr i{background:var(--max)}
+.br.zero .tr{background:transparent;border:1.5px dashed var(--bad)}
+.br.zero .val{color:var(--bad)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2);margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+/* gauges */
+.gauge{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+.gauge svg{width:100%;max-width:150px;height:auto}
+.gauge .gl{font-size:12.5px;color:var(--muted)}
+.gauge text{font-family:var(--body)}
+.score-wrap{display:grid;grid-template-columns:170px minmax(0,1fr);gap:20px;align-items:center}
+
+/* waffle */
+.waffle{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;max-width:270px;margin-top:14px}
+.waffle i{aspect-ratio:1/1;border-radius:6px;display:block;max-width:100%}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-family:var(--mono);font-size:13.5px;font-weight:600;background:var(--surface)}
+.chip small{display:block;font-family:var(--body);font-weight:400;font-size:11px;color:var(--muted)}
+.chip.warn{background:var(--bad-soft);border-color:var(--bad);color:var(--bad)}
+.chip.no{font-family:var(--body);font-weight:500;font-size:13px;background:var(--bad-soft);border-color:transparent;color:var(--bad);padding:6px 12px}
+.chip.no::before{content:'✕ ';font-weight:700}
+
+/* columns chart */
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:end;height:200px;margin-top:16px}
+.col{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;height:100%;text-align:center}
+.col .bar{background:var(--family);border-radius:6px 6px 0 0;opacity:.6}
+.col.first .bar{opacity:1}
+.col .num{font-family:var(--mono);font-weight:600;font-size:13px;margin-bottom:6px}
+.col .x{font-size:12px;color:var(--muted);margin-top:6px}
+.stack{display:flex;height:42px;border-radius:8px;overflow:hidden;gap:2px;margin-top:12px}
+.stack div{display:flex;align-items:center;padding-inline:12px;font-weight:600;font-size:13.5px;white-space:nowrap;overflow:hidden}
+.stack .a{background:var(--max);color:#fff}
+.stack .b{background:var(--bad-soft);color:var(--bad)}
+
+/* competitors */
+.comp{display:flex;flex-direction:column;gap:8px}
+.comp .who{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.comp .who b{font-size:14px}
+.comp .who span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:right}
+.comp h4{margin:0;font-family:var(--display);font-size:20px;font-weight:600;color:var(--head);line-height:1.15}
+.comp .pf{font-family:var(--mono);font-size:13.5px;font-weight:600;line-height:1.45}
+.comp .pf small{display:block;font-family:var(--body);font-weight:400;font-size:11px;color:var(--muted)}
+.comp .gap{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:13.5px}
+.comp .gap b{font-family:var(--mono);font-size:10.5px;color:var(--bad);letter-spacing:.06em;margin-right:6px}
+.comp .gap b.l{color:var(--senior)}
+
+/* range ladder */
+.ladder{position:relative;margin-top:8px}
+.lrow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.lrow:first-child{border-top:0}
+.lrow .g b{display:block;font-size:14px}
+.lrow .g span{font-size:12px;color:var(--muted)}
+.lt{position:relative;min-height:26px}
+.it{position:relative;height:24px}
+.it .m{position:absolute;top:8px;height:8px;border-radius:5px}
+.it .m.dot{width:12px;height:12px;top:6px;border-radius:50%;transform:translateX(-6px)}
+.it .t{position:absolute;top:1px;font-size:12px;white-space:nowrap;color:var(--ink-2);background:var(--surface);padding:0 4px;border-radius:4px;z-index:2}
+.it .m{z-index:2}
+.it .t b{color:var(--ink);font-weight:600}
+.axisx{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:16px;margin-top:4px}
+.axisx .ticks{position:relative;height:18px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.axisx .ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.e361{position:absolute;top:0;bottom:0;width:2px;background:var(--head);pointer-events:none;z-index:1}
+.e361 span{position:absolute;top:-24px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:11.5px;font-weight:600;background:var(--navy);color:var(--on-navy);padding:3px 9px;border-radius:999px}
+.ladder-wrap{overflow-x:auto;padding-top:26px}
+.ladder-inner{min-width:620px}
+
+/* families matrix */
+.mx{width:100%;border-collapse:collapse;min-width:720px}
+.mx th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:0 6px 8px;text-align:center}
+.mx th:first-child,.mx th:nth-child(2){text-align:left}
+.mx td{padding:10px 6px;border-top:1px solid var(--line);vertical-align:middle;text-align:center}
+.mx td:first-child{text-align:left}
+.fam{display:flex;gap:10px;align-items:center}
+.fam .ic{width:30px;height:30px;border-radius:50%;flex:0 0 30px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--mono);font-size:12px;font-weight:600}
+.fam b{font-size:14px}
+.fam .pill{font-size:10.5px;padding:2px 7px;border-radius:999px;background:var(--good-soft);color:var(--good);margin-left:6px;font-weight:600}
+.fam .pill.w{background:var(--senior-soft);color:var(--senior)}
+.fam small{display:block;font-size:12px;color:var(--muted)}
+.fam small em{font-style:normal;color:var(--good);font-weight:600}
+.doubt{color:var(--bad);font-size:13px;text-align:left !important;white-space:nowrap}
+.wd{display:inline-block;border-radius:50%;background:var(--family)}
+.wd.w2{width:18px;height:18px} .wd.w1{width:12px;height:12px;opacity:.55} .wd.w0{width:5px;height:5px;opacity:.35}
+.ages .r{margin-top:12px}
+.ages .r b{font-size:14px}
+.ages .ln{display:flex;align-items:center;gap:8px;margin-top:5px}
+.ages .ln i{height:10px;border-radius:6px;display:block}
+.ages .ln span{font-family:var(--mono);font-size:12.5px;font-weight:600}
+
+/* pain → strength */
+.ps{display:grid;grid-template-columns:52px minmax(0,1fr) 24px minmax(0,1fr) minmax(0,150px);gap:10px;align-items:center;padding:6px 0}
+.ps .nums{display:flex;gap:3px}
+.ps .nums i{width:22px;height:22px;border-radius:50%;color:#fff;font-style:normal;font-family:var(--mono);font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:600}
+.ps .pain{background:var(--bad-soft);border-radius:8px;padding:9px 12px;font-size:13.5px}
+.ps .str{background:var(--good-soft);color:#0B5E45;border-radius:8px;padding:9px 12px;font-size:13.5px;font-weight:600}
+.ps .ar{color:var(--good);text-align:center}
+.ps .lim{font-size:12.5px;color:var(--muted)}
+.why{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;background:var(--hero);color:var(--on-forest);border-radius:var(--r);padding:16px 22px}
+.why .lbl{color:var(--on-forest-2)}
+.why b{font-family:var(--display);font-weight:500;font-size:20px}
+.why small{font-size:12px;color:var(--on-forest-2)}
+
+/* compare table */
+.cmp{width:100%;border-collapse:separate;border-spacing:0 6px}
+.cmp th{padding:10px 14px;text-align:left;color:#fff;font-size:14.5px}
+.cmp th.f{background:var(--family);border-radius:10px 10px 0 0}
+.cmp th.s{background:var(--senior);border-radius:10px 10px 0 0}
+.cmp td{background:var(--surface);padding:10px 14px;font-size:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cmp td:first-child{font-weight:600;border-left:1px solid var(--line);border-radius:10px 0 0 10px;color:var(--ink-2);width:150px}
+.cmp td:last-child{border-right:1px solid var(--line);border-radius:0 10px 10px 0}
+.cmp td.f{box-shadow:inset 3px 0 0 var(--family)} .cmp td.s{box-shadow:inset 3px 0 0 var(--senior)}
+
+/* plans */
+.plan h3{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.plan h3 span{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--ink-2)}
+.area{display:flex;height:30px;border-radius:7px;overflow:hidden;gap:2px;margin-top:12px}
+.area div{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11.5px;font-weight:600;white-space:nowrap;overflow:hidden}
+.area .c{color:#fff} .area .b{background:var(--surface-2);color:var(--ink-2)} .area .w{background:var(--track)} .area .o{background:var(--surface-2);color:var(--muted)}
+.akey{display:flex;gap:14px;font-size:11.5px;color:var(--muted);margin-top:6px;flex-wrap:wrap}
+.akey span{display:inline-flex;align-items:center;gap:5px}
+.akey i{width:9px;height:9px;border-radius:2px;display:inline-block}
+.plan .eff{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-size:13.5px;color:var(--ink-2)}
+.plan .eff b{font-family:var(--mono)}
+.feat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,180px);gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--line)}
+.feat:first-of-type{border-top:0}
+.feat b{font-size:14px;display:block}
+.feat .rt{display:flex;align-items:center;gap:8px;margin-top:5px}
+.feat .rt i{display:block;height:6px;border-radius:4px;width:110px;background:var(--track);position:relative;overflow:hidden}
+.feat .rt i em{position:absolute;inset:0 auto 0 0;border-radius:4px}
+.feat .rt span{font-family:var(--mono);font-size:12px;font-weight:600}
+.feat .who{font-size:12.5px;color:var(--ink-2);background:var(--surface-2);border-radius:8px;padding:6px 10px}
+.colhead{border-radius:10px;padding:10px 14px;color:#fff;font-weight:600;font-size:14.5px}
+
+/* fits */
+.fit .hd{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.fit .hd .pr{font-family:var(--display);font-size:28px;font-weight:600;letter-spacing:-.01em;color:var(--head);line-height:1}
+.fit .hd .pr small{font-family:var(--body);font-size:12px;color:var(--muted);font-weight:400}
+.fit .hd p{font-size:12.5px;color:var(--muted);margin-top:4px}
+.fr{display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr) minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.fr .k{font-weight:600;color:var(--ink-2)}
+.fr .y::before{content:"✓ ";color:var(--good);font-weight:700}
+.fr .n{color:var(--bad)} .fr .n::before{content:"✕ ";font-weight:700}
+.fr.h{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fr.h .y::before,.fr.h .n::before{content:""}
+.fr.h .n{color:var(--muted)}
+.q4{display:grid;grid-template-columns:minmax(0,140px) repeat(4,minmax(0,1fr));gap:10px;align-items:center;background:var(--hero);border-radius:var(--r);padding:14px}
+.q4 > b{color:var(--on-forest);font-size:14px}
+.q4 div{background:rgba(255,255,255,.1);border-radius:10px;padding:10px 12px;color:var(--on-forest);font-size:13.5px;display:flex;gap:9px;align-items:center}
+.q4 div i{font-style:normal;width:22px;height:22px;flex:0 0 22px;border-radius:50%;background:#fff;color:#0A0A0A;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700}
+
+/* income */
+.inc{display:grid;gap:14px;margin-top:10px}
+.ir{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:14px;align-items:center}
+.ir b{font-size:14px;display:block}
+.ir small{font-size:12px;color:var(--muted)}
+.itr{position:relative;height:22px;background:transparent}
+.itr .seg{position:absolute;top:0;bottom:0}
+.itr .seg.g{background:var(--good)} .itr .seg.a{background:var(--senior)} .itr .seg.x{background:var(--other)}
+.thr{position:absolute;top:-6px;bottom:-6px;border-left:1.5px dashed}
+.iaxis{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:14px}
+.iaxis .ticks{position:relative;height:30px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.iaxis .ticks span{position:absolute;transform:translateX(-50%);top:4px;white-space:nowrap}
+.thl{font-size:12px;margin-top:4px;display:flex;flex-wrap:wrap;gap:4px 16px}
+.lives{display:grid;gap:0}
+.lives div{padding:10px 0;border-top:1px solid var(--line)}
+.lives div:first-child{border-top:0}
+.lives b{font-size:14px;display:block}
+.lives span{font-size:12.5px;color:var(--muted)}
+.lives .me b{color:var(--senior)}
+
+/* handle */
+.hz{background:var(--bad-soft);border-radius:12px;padding:14px 16px;display:grid;gap:4px}
+.hz b{font-size:14px}
+.hz .sc{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.hz .fx{font-size:13.5px;color:var(--good);font-weight:600}
+.hz .fx::before{content:'→ '}
+
+/* NRI */
+.cal{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px}
+.cal div{text-align:center}
+.cal .m{border-radius:8px;padding:9px 0;font-weight:600;font-size:13px;background:var(--surface-2);color:var(--muted)}
+.cal .m.h{background:var(--family);color:#fff} .cal .m.a{background:var(--senior);color:#fff} .cal .m.s{background:var(--blue);color:#fff}
+.cal small{display:block;font-size:11px;color:var(--muted);margin-top:5px;min-height:15px}
+.br.dim{color:var(--muted)} .br.dim .tr i{background:var(--other)}
+
+@media (max-width:900px){
+  .land{grid-template-columns:1fr;gap:28px;padding-block:32px 16px}
+  .g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3{grid-template-columns:1fr}
+  .q4{grid-template-columns:1fr 1fr}
+  .q4 > b{grid-column:1 / -1}
+  .ps{grid-template-columns:52px minmax(0,1fr);}
+  .ps .ar{display:none}
+  .ps .str{grid-column:2}
+  .ps .lim{grid-column:2;padding-left:4px}
+  .cal{grid-template-columns:repeat(5,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .g2{grid-template-columns:1fr}
+  .gets{grid-template-columns:1fr}
+  .pmeta{grid-template-columns:1fr 1fr 1fr}
+  .score-wrap{grid-template-columns:1fr}
+  .br{grid-template-columns:minmax(0,120px) minmax(0,1fr) 48px}
+  .fr{grid-template-columns:minmax(0,88px) minmax(0,1fr) minmax(0,1fr);font-size:12.5px}
+  .ir,.iaxis{grid-template-columns:1fr}
+  .iaxis > div:first-child{display:none}
+  .feat{grid-template-columns:1fr}
+  .cmp td:first-child{width:96px}
+  .top .meta{display:none}
+  .ladder-inner{min-width:0}
+  .lrow,.axisx{grid-template-columns:1fr;gap:6px}
+  .axisx > div:first-child{display:none}
+  .it{height:auto;min-height:36px;padding-top:20px;margin-bottom:6px}
+  .it .t{top:0;left:0 !important;right:auto !important;padding-left:0;background:transparent}
+  .it .m{top:auto;bottom:0} .it .m.dot{top:auto;bottom:-2px}
+  .lt{padding-bottom:2px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+
+/* ---- Advait additions ---- */
+.hero{border-radius:18px;padding:26px 28px;border:1px solid #CDE6DA;border-left:6px solid var(--good);background:var(--good-soft)}
+.hero .lbl{color:var(--good);font-weight:600}
+.hero h2{font-size:clamp(28px,4.2vw,46px);line-height:1.07;margin-top:10px;letter-spacing:-.01em}
+.hero p{font-size:17px;color:var(--ink-2);margin-top:12px;max-width:72ch}
+.hero p b{color:var(--ink)}
+.risk{border-radius:14px;padding:18px 22px;background:var(--bad-soft);border:1px solid #F3CFCF;border-left:6px solid var(--bad)}
+.risk .lbl{color:var(--bad);font-weight:600}
+.risk p{font-size:15.5px;margin-top:6px;color:var(--ink-2)} .risk p b{color:var(--ink)}
+.fc{border-radius:14px;padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--blue)}
+.fc .q{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fc .v{font-family:var(--display);font-size:clamp(30px,3.4vw,40px);font-weight:600;line-height:1;margin-top:8px;color:var(--head)}
+.fc .v small{font-family:var(--body);font-size:.42em;color:var(--muted);font-weight:500}
+.fc p{font-size:13px;color:var(--ink-2);margin-top:8px}
+.moves{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.move{border-radius:14px;padding:18px 20px;background:var(--surface);border:1px solid var(--line)}
+.move .n{width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:12px;color:#fff;background:var(--ink)}
+.move h4{margin:10px 0 0;font-family:var(--display);font-size:20px;font-weight:600;line-height:1.2;color:var(--head)}
+.move p{font-size:13.5px;color:var(--ink-2);margin-top:6px}
+/* supply timeline */
+.tl2{position:relative;margin-top:6px}
+.tl2 .row{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:14px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.tl2 .row:first-of-type{border-top:0}
+.tl2 .nm b{display:block;font-size:14px}
+.tl2 .nm span{font-size:12px;color:var(--muted)}
+.tl2 .tr{position:relative;height:24px}
+.tl2 .bar{position:absolute;top:7px;height:10px;border-radius:6px;background:var(--track)}
+.tl2 .bar.build{background:repeating-linear-gradient(135deg,var(--other) 0 6px,#E9E5DC 6px 12px)}
+.tl2 .key{position:absolute;top:2px;width:20px;height:20px;border-radius:50%;transform:translateX(-10px);display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700}
+.tl2 .lab{position:absolute;top:2px;font-size:12px;font-weight:600;white-space:nowrap;background:var(--surface);padding:0 4px;border-radius:4px}
+.tl2 .ready{position:absolute;top:7px;height:10px;border-radius:6px;background:var(--good)}
+.tl2 .years{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:14px}
+.tl2 .years .t{position:relative;height:20px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.tl2 .years .t span{position:absolute;transform:translateX(-50%)}
+.tl2 .now{position:absolute;top:0;bottom:22px;width:2px;background:var(--bad);z-index:1}
+.tl2 .now span{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:600;color:#fff;background:var(--bad);padding:2px 8px;border-radius:999px;white-space:nowrap}
+.tl2-wrap{overflow-x:auto;padding-top:22px}
+.tl2-inner{min-width:720px}
+.window{position:absolute;top:0;bottom:22px;background:rgba(15,138,100,.07);border-left:1px dashed var(--good);border-right:1px dashed var(--good);z-index:0}
+.window span{position:absolute;bottom:4px;left:6px;font-size:11px;font-weight:600;color:var(--good);white-space:nowrap}
+/* audit */
+.audit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.claim{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:14px}
+.claim:first-of-type{border-top:0}
+.claim i{font-style:normal;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff}
+.claim i.x{background:var(--bad)} .claim i.k{background:var(--good)}
+.claim b{display:block}
+.claim span{font-size:12.5px;color:var(--muted)}
+/* segments */
+.seg{display:grid;grid-template-columns:34px minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr);gap:12px;align-items:start;padding:12px 0;border-top:1px solid var(--line);font-size:13.5px}
+.seg:first-of-type{border-top:0}
+.seg .rk{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--mono);font-weight:700;font-size:12px}
+.seg b{display:block;font-size:14.5px}
+.seg .sz{font-size:12px;color:var(--muted)}
+.seg .tagx{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;margin-top:4px}
+.seg-h{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:grid;grid-template-columns:34px minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr);gap:12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+/* plan phases */
+.phases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ph{border-radius:14px;padding:16px 18px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.ph .when{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
+.ph h4{margin:0;font-family:var(--display);font-size:20px;font-weight:600;line-height:1.15;color:var(--head)}
+.ph ul{list-style:none;margin:4px 0 0;padding:0}
+.ph li{font-size:13px;line-height:1.4;padding:7px 0 7px 14px;border-top:1px solid var(--line);position:relative;color:var(--ink-2)}
+.ph li:first-child{border-top:0}
+.ph li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.5}
+.ph li b{color:var(--ink)}
+.ph.p0{border-top:4px solid var(--bad)} .ph.p1{border-top:4px solid var(--blue)} .ph.p2{border-top:4px solid var(--senior)} .ph.p3{border-top:4px solid var(--good)}
+.fix{display:grid;grid-template-columns:minmax(0,1fr) 54px minmax(0,1.2fr);gap:12px;align-items:center;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px}
+.fix:first-of-type{border-top:0}
+.fix .rs{font-family:var(--mono);font-weight:700;text-align:center;border-radius:6px;padding:3px 0;font-size:12px}
+.fix .rs.r{background:var(--bad-soft);color:var(--bad)} .fix .rs.a{background:var(--senior-soft);color:var(--senior)}
+.fix .ow{font-size:12.5px;color:var(--muted)}
+/* budget table */
+.bt{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
+.bt th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:500;padding:0 10px 8px 0;border-bottom:1px solid var(--line)}
+.bt th.n,.bt td.n{text-align:right;padding-right:18px}
+.bt td{padding:10px 10px 10px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.bt td.n{font-family:var(--mono);font-weight:600}
+.bt td .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:0}
+.bt tr.tot td{font-weight:700;border-bottom:0;padding-top:12px}
+.bt td small{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:2px}
+.bstack{display:flex;height:34px;border-radius:8px;overflow:hidden;gap:2px;margin-top:10px}
+.bstack div{display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden}
+/* funnel */
+.ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.seg-btn{display:inline-flex;background:var(--surface-2);border-radius:999px;padding:4px;gap:2px}
+.seg-btn button{border:0;background:transparent;padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:500;color:var(--muted)}
+.seg-btn button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.funnel{display:grid;gap:8px;margin-top:6px}
+.fs{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr) 90px;gap:12px;align-items:center}
+.fs .lb{font-size:14px;font-weight:600}
+.fs .lb small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+.fs .bx{height:40px;border-radius:8px;display:flex;align-items:center;padding-inline:12px;color:#fff;font-weight:700;font-family:var(--mono);font-size:14px;min-width:46px;transition:width .35s ease}
+.fs .rt{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right}
+.res{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.bench td{font-size:13px}
+.units{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.units i{width:16px;height:16px;border-radius:4px;display:block}
+@media (max-width:900px){
+  .moves,.phases{grid-template-columns:1fr 1fr}
+  .res{grid-template-columns:1fr 1fr}
+  .audit{grid-template-columns:1fr}
+  .seg,.seg-h{grid-template-columns:34px minmax(0,1fr) minmax(0,1fr)}
+  .seg > :nth-child(4),.seg-h > :nth-child(4){grid-column:2 / -1}
+}
+@media (max-width:640px){
+  .moves,.phases{grid-template-columns:1fr}
+  .fs{grid-template-columns:minmax(0,96px) minmax(0,1fr) 64px}
+  .fix{grid-template-columns:minmax(0,1fr) 48px}
+  .fix .ow{grid-column:1 / -1}
+}
+</style>
+<style>html,body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><b>Fixit</b><span>Project analysis</span></div>
+    <div class="meta">Go-to-market plan for the promoter · October 2026 · Confidential</div>
+  </header>
+
+  <!-- LANDING -->
+  <section id="landing" class="land">
+    <div>
+      <div class="lbl">Fixit · Project analysis</div>
+      <h1 style="margin-top:14px">One project. The full plan.</h1>
+      <p class="lede">Fixit reads the project, the market, every live competitor ad and the buyers behind them. Then it builds the plan, the budget and a conservative forecast you can hold us to.</p>
+      <div class="gets">
+        <div><b>01</b>Summary for the promoter</div>
+        <div><b>02</b>The senior-living market</div>
+        <div><b>03</b>Competitors and their campaigns</div>
+        <div><b>04</b>The buyers</div>
+        <div><b>05</b>Plan of action</div>
+        <div><b>06</b>Budget</div>
+        <div><b>07</b>Funnel and forecast</div>
+      </div>
+    </div>
+    <div class="proj">
+      <div class="cover">
+        <div class="k">SECTOR 50 · NIRVANA COUNTRY · GURUGRAM</div>
+        <div class="n">Advait</div>
+        <div class="d">PIONEERURBAN × J K · LICENSED SENIOR LIVING · 164 HOMES</div>
+        <svg width="190" height="190" viewBox="0 0 190 190" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="95" cy="95" r="90"/><circle cx="95" cy="95" r="62"/><circle cx="95" cy="95" r="34"/><path d="M5 140 L185 40"/><path d="M70 5 L120 185"/></g></svg>
+      </div>
+      <div class="pmeta">
+        <div><b>~50</b><span>homes left</span></div>
+        <div><b>₹3.5–3.74 Cr</b><span>price list</span></div>
+        <div><b>Mar 2027</b><span>keys (owner)</span></div>
+      </div>
+      <div class="srcs" aria-label="Sources read"><span>Buyer Intelligence Workbook</span><span>HARERA</span><span>Meta Ad Library</span><span>Google Ads Transparency</span><span>Search demand</span><span>Instagram & YouTube</span><span>Market reports</span></div>
+      <button class="go" id="go" type="button">Analyse Advait <span aria-hidden="true">→</span></button>
+      <ol class="steps" id="steps" hidden>
+        <li><span class="dot">1</span>Reading the Advait workbook and price list</li>
+        <li><span class="dot">2</span>Mapping senior-living supply and possession dates</li>
+        <li><span class="dot">3</span>Scanning competitor ads in India, the US and the UAE</li>
+        <li><span class="dot">4</span>Sizing buyers: local seniors, children, NRIs</li>
+        <li><span class="dot">5</span>Building the plan, budget and funnel</li>
+      </ol>
+      <p class="note-sm">Analysis as of 13 October 2026. Takes a few seconds.</p>
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dash" hidden>
+    <div class="dhead">
+      <div>
+        <div class="sub">PioneerUrban × J K · Advait · Sector 50, Gurugram</div>
+        <h1>Go-to-market plan for the promoter</h1>
+      </div>
+      <button class="ghost" id="restart" type="button">Start over</button>
+    </div>
+    <nav class="tabs" aria-label="Plan sections"><div class="row" role="tablist" id="tablist"></div></nav>
+
+    <!-- 1 SUMMARY -->
+    <div class="panel" role="tabpanel" id="p-summary" data-tab="summary" data-name="Summary">
+      <div class="hero">
+        <div class="lbl">The opportunity</div>
+        <h2>Until 2030, Advait is the only licensed senior home in Gurugram a family can move a parent into.</h2>
+        <p>The OC is due in December and keys in March 2027. The next licensed homes, JMS Silver Living and Antara at Estate 360, are due around 2030; Antara at Estate 361 and DLF's The Aureva around 2033. <b>About 50 homes are left. This plan sells them while that window is open.</b></p>
+      </div>
+      <div class="risk">
+        <div class="lbl">The risk</div>
+        <p><b>Almost nobody is hearing about it.</b> Four of Advait's five live Meta ads show under 100 impressions. Google shows 4 Advait ads to Antara's 22. Searches for "Advait senior living" are too low to register, and a Hyderabad project called Advait Living runs senior-living ads under the same name.</p>
+      </div>
+      <div class="g4">
+        <div class="tile bad"><div class="v">~50<small>homes</small></div><p>left of 164, about ₹181 Cr at list price (Advait's own ad, 8 Oct)</p></div>
+        <div class="tile"><div class="v">Mar 2027</div><p>keys, owner-stated. The next licensed keys in Gurugram are ~2030.</p></div>
+        <div class="tile"><div class="v">~65%</div><p>of early buyers lived in Gurugram, many downsizing (company, Jun 2025)</p></div>
+        <div class="tile bad"><div class="v">0</div><p>Gurugram senior projects advertising to NRI children in the US or UAE today</p></div>
+      </div>
+      <div class="sec">
+        <div class="lbl" style="color:var(--blue)">Conservative forecast · bookings this plan delivers</div>
+        <div class="g4">
+          <div class="fc"><div class="q">This quarter · 15 Oct – 31 Dec</div><div class="v" id="s-q3">6 <small>bookings</small></div><p id="s-q3v">≈ ₹23 Cr booked</p></div>
+          <div class="fc"><div class="q">Next quarter · Jan – Mar 2027</div><div class="v" id="s-q4">13 <small>bookings</small></div><p id="s-q4v">≈ ₹47 Cr booked, with the OC in hand</p></div>
+          <div class="fc" style="border-top-color:var(--senior)"><div class="q">Budget · two quarters</div><div class="v">₹1.32 Cr</div><p>₹60 L this quarter, ₹72 L next. Media, events, content and CRM.</p></div>
+          <div class="fc" style="border-top-color:var(--good)"><div class="q">Cost per booking · two quarters</div><div class="v" id="s-cpb">~₹7 L</div><p id="s-cpbp">about 1.9% of the ticket, below a 2–3% channel-partner brokerage</p></div>
+        </div>
+      </div>
+      <div class="sec">
+        <div class="lbl">Three moves</div>
+        <div class="moves">
+          <div class="move"><span class="n" style="background:var(--bad)">1</span><h4>Fix it before you spend</h4><p>Publish the monthly service charge and the Fortis service scope, file the March 2027 date on HARERA, and pull ad claims the workbook can't support. Buyers read silence as the worst answer.</p></div>
+          <div class="move"><span class="n" style="background:var(--blue)">2</span><h4>Sell the 2027 move-in</h4><p>An OC open day for founding residents, NRI families' winter visits in December and January, and "move in before summer" when keys arrive in March.</p></div>
+          <div class="move"><span class="n" style="background:var(--good)">3</span><h4>Run four engines, not one</h4><p>Local seniors (the core), Gurugram and Delhi children, NRI children abroad, and referrals from CK Birla, residents and new owners.</p></div>
+        </div>
+      </div>
+      <div class="sec"><div class="lbl">Read the plan</div><div class="g3" id="jumps"></div></div>
+      <p class="src">Advait workbook and visual summary (Oct 2026). Inventory: "164 residences. 50 units remaining." in Advait's Meta ad started 8 Oct 2026; value at the weighted price list (₹3.62 Cr average). Buyer mix: TheRealtyToday, 20 Jun 2025. Fixit scan, 13 Oct 2026: Meta Ad Library (India, US, UAE), Google Ads Transparency Centre (30 days), search volumes (seodata.dev). Forecast and budget detail in the Funnel and Budget tabs.</p>
+    </div>
+
+    <!-- 2 MARKET -->
+    <div class="panel" role="tabpanel" id="p-market" data-tab="market" data-name="Market" hidden>
+      <div class="sec">
+        <span class="tag">A · The market</span>
+        <h2>The category is real. Gurugram just proved it.</h2>
+        <div class="g4">
+          <div class="tile ok"><div class="v">₹1,985 Cr</div><p>DLF The Aureva: 172 senior homes, sold out in Oct 2026 at ~₹11.5 Cr each. 25% NRI.</p></div>
+          <div class="tile ok"><div class="v">11 months</div><p>for Antara's 292 senior homes at Estate 360 to sell out</p></div>
+          <div class="tile"><div class="v">25,050</div><p>organised senior-living units in India (Jun 2026), growing 14.2% a year, 1.5% penetration</p></div>
+          <div class="tile"><div class="v">₹1 lakh Cr</div><p>market by 2030, from ~₹30,000 Cr today; 75,000 new units in 3–4 years (Colliers)</p></div>
+        </div>
+      </div>
+      <div class="sec">
+        <h2>Who can a parent move into, and when.</h2>
+        <div class="card"><div class="tl2-wrap"><div class="tl2-inner" id="supply"></div></div>
+          <div class="legend"><span><i style="background:var(--good)"></i>Ready or keys due</span><span><i style="background:repeating-linear-gradient(135deg,var(--other) 0 3px,#E9E5DC 3px 6px)"></i>Under construction</span><span><i style="background:var(--senior)"></i>Keys (estimated)</span></div></div>
+        <div class="call" style="background:var(--senior-soft)"><b style="color:var(--senior)">The window narrows.</b> The only ready senior homes in NCR are Antara Noida, across the city, and older stock in Sohna. Haryana raised the floor-area ratio for retirement housing to 3.0 in April 2026, and Colliers expects 75,000 new senior units in 3–4 years. More licensed supply is coming to Gurugram. None of it can deliver before Advait.</div>
+      </div>
+      <div class="sec">
+        <h2>How families actually search.</h2>
+        <div class="g2">
+          <div class="card"><h3>Monthly Google searches</h3><p class="cap">India · seodata.dev estimates</p><div class="bars" id="b-search"></div></div>
+          <div class="card" style="display:grid;gap:12px;align-content:start">
+            <div class="call ok"><b>Families search for care, not for "senior living".</b> "Old age home gurgaon" is the phrase with volume. The industry's own words barely register.</div>
+            <div class="call" style="background:var(--blue-soft)"><b style="color:#1E40AF">Antara is searched by name about 5,000 times a month.</b> Advait isn't searched by name at all yet. Brand search has to be built, and defended.</div>
+            <div class="call bad"><b>Care-intent search is cheap.</b> Cost per click on the "old age home" cluster runs under a dollar. It's the most direct route to a family that is deciding now.</div>
+          </div>
+        </div>
+      </div>
+      <div class="sec">
+        <h2>Who has actually bought.</h2>
+        <div class="g3">
+          <div class="card" style="border-top:4px solid var(--good)"><h3>Advait, early buyers</h3><div class="bars" style="margin-top:14px">
+            <div class="br s"><span>Gurugram residents</span><div class="tr"><i style="width:65%"></i></div><span class="val">~65%</span></div>
+            <div class="br"><span>South & West Delhi (most of the rest)</span><div class="tr"><i style="width:30%"></i></div><span class="val">≤35%</span></div>
+            <div class="br"><span>Independent singles</span><div class="tr"><i style="width:42%;background:var(--senior)"></i></div><span class="val">40–45%</span></div></div>
+            <p class="cap" style="margin-top:10px">Company statement, Jun 2025. Many were downsizing from larger homes.</p></div>
+          <div class="card" style="border-top:4px solid var(--senior)"><h3>DLF The Aureva</h3><div class="bars" style="margin-top:14px">
+            <div class="br"><span>Delhi-NCR</span><div class="tr"><i style="width:65%"></i></div><span class="val">65%</span></div>
+            <div class="br"><span>NRI</span><div class="tr"><i style="width:25%;background:var(--blue)"></i></div><span class="val">25%</span></div>
+            <div class="br"><span>Rest of India</span><div class="tr"><i style="width:10%"></i></div><span class="val">10%</span></div></div>
+            <p class="cap" style="margin-top:10px">DLF, Oct 2026. NRIs were 18–22% of top-8-city primary sales in 2024.</p></div>
+          <div class="card" style="background:var(--surface-2);border:0"><h3>What it means</h3><p style="margin-top:8px;font-size:14.5px;color:var(--ink-2)"><b style="color:var(--ink)">Local seniors buying for themselves are the core.</b> Gurugram and Delhi children are the second engine. NRI children are the growth engine nobody in NCR is working, and the one most tied to the December–January visit window.</p></div>
+        </div>
+      </div>
+      <div class="sec">
+        <h2>What the price says.</h2>
+        <div class="card"><div class="ladder-wrap"><div class="ladder-inner" id="ladder"></div></div></div>
+        <div class="g3">
+          <div class="card" style="border-top:3px solid var(--good)"><h3>Priced for a home, not a trade</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">₹18,500 BSP is 7% above Nirvana Country's own flats. The premium is the licence and the care. Resale is 55+ only, so there's no investor case.</p></div>
+          <div class="card" style="border-top:3px solid var(--blue)"><h3>Far below the brands</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">Antara at Estate 361 is ~₹22,500 and The Aureva ₹28,000–32,000 per sq ft. Never name them in ads. Lead with care and timing.</p></div>
+          <div class="card" style="border-top:3px solid var(--senior)"><h3>The care-home check</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">Type B's all-in earns ~₹2.46 L a month in a 7% deposit, above Gurugram's dearest care home. Ownership wins on home, title and family, not on cost.</p></div>
+        </div>
+      </div>
+      <p class="src">Max India investor release, 11 Aug 2026 (Estate 360 sold out; Estate 361 154 of 360 sold by 30 Jun 2026; Antara Noida possession Q1 FY27). Keys for JMS, Estate 360, Estate 361 and The Aureva from HARERA-registered dates and listings, estimated. JLL–ASLI via Business Today, 22 Jul 2026 and TheRealtyToday, 10 Sep 2026; Colliers via Onmanorama, 24 Aug 2026; Haryana FAR revision, TheRealtyToday, Apr 2026. DLF The Aureva: Business Today, 5 Oct 2026; Construction World, 8 Oct 2026. Antara Estate 360: The Week, 8 Dec 2025. NRI share: Storyboard18, 3 Mar 2026. Search: seodata.dev estimates, Oct 2026. Price ladder and care-home check: Advait Buyer Intelligence Workbook, Oct 2026 (asking prices, directional). Possession dates as noted on the timeline.</p>
+    </div>
+
+    <!-- 3 COMPETITORS -->
+    <div class="panel" role="tabpanel" id="p-compete" data-tab="compete" data-name="Competitors" hidden>
+      <div class="sec">
+        <span class="tag bad">B · Competitors and campaigns</span>
+        <h2>Who is talking to Advait's buyers today.</h2>
+        <div class="g3">
+          <div class="card comp"><div class="who"><b>Antara · Max Group</b><span>Estate 360 · 361 · care homes</span></div><h4>The category's loudest voice</h4><div class="pf">22 Google ads in 30 days<br>19+ live Meta ads for Estate 361<small>Ad libraries, Oct 2026</small></div><p style="font-size:13px;color:var(--ink-2)">Resident testimonials, the "Apno Jaisi" series for adult children, AGEasy with Anupam Kher, print for seniors and six WhatsApp communities. SEO is a core pillar.</p><div class="gap"><b class="l">LESSON</b>206 of Estate 361's senior homes were unsold in June, keys ~2033. Antara will keep advertising to your families. You sell keys in 2027.</div></div>
+          <div class="card comp"><div class="who"><b>DLF The Aureva</b><span>Sector 63 · sold out</span></div><h4>Luxury framing sells senior living</h4><div class="pf">172 homes · ₹1,985 Cr<br>25% NRI buyers<small>DLF, Oct 2026</small></div><p style="font-size:13px;color:var(--ink-2)">Sold as luxury retirement next to The Arbour. Brokers now advertise "DLF Senior Living" resale to the same audience.</p><div class="gap"><b class="l">LESSON</b>Demand at the top is proven. Never compare prices with it.</div></div>
+          <div class="card comp"><div class="who"><b>Lamose Gratitude 84</b><span>Sector 84 · new</span></div><h4>The next local launch</h4><div class="pf">"Don't downsize life"<br>3 BHK from ~₹2.31 Cr<small>ads; listing price</small></div><p style="font-size:13px;color:var(--ink-2)">Multigenerational senior community; ground broken Sep 2026, RERA Jan 2026. Ads lead on independence: "Independence is the real luxury".</p><div class="gap"><b>THREAT</b>Cheaper and bigger on paper, but years from keys.</div></div>
+          <div class="card comp"><div class="who"><b>PP Reddy · TVS Serene · Manasum</b><span>South India · US ads</span></div><h4>They already talk to NRI children</h4><div class="pf">"Living in the USA but worried<br>about your parents back in India?"<small>Meta ad, US feed</small></div><p style="font-size:13px;color:var(--ink-2)">Running in US feeds now. No Gurugram or NCR senior project appears in US or UAE feeds for "senior living India".</p><div class="gap"><b class="l">OPENING</b>The NRI child is reachable, and nobody in NCR is trying.</div></div>
+          <div class="card comp"><div class="who"><b>Athulya · Ziva</b><span>Biggest India advertisers</span></div><h4>Care-led hooks that convert</h4><div class="pf">"Stay before you decide"<br>Post-hospital rehab · respite<small>Meta ads, India</small></div><p style="font-size:13px;color:var(--ink-2)">Athulya leads "senior living" ad volume in India with short-stay rehab, dementia care and respite while children travel. Ziva offers an experience stay.</p><div class="gap"><b class="l">LESSON</b>Let families try a day at Advait before the cheque.</div></div>
+          <div class="card comp"><div class="who"><b>Vedaanta · Primus</b><span>Creative · referrals</span></div><h4>The child abroad, and the neighbour</h4><div class="pf">"Two Homes, One Bond"<br>30–50% of move-ins via referral<small>Vedaanta May 2026; Colliers–Primus Sep 2026</small></div><p style="font-size:13px;color:var(--ink-2)">Vedaanta's Mother's Day film shows a daughter abroad on video calls. Primus and Colliers put referrals at 30–50% of move-ins.</p><div class="gap"><b class="l">LESSON</b>Every new Advait owner is a sales channel.</div></div>
+        </div>
+      </div>
+      <div class="sec">
+        <h2>Advait's own ads, audited.</h2>
+        <div class="audit">
+          <div class="card"><h3>Five live Meta ads · four under 100 impressions</h3><p class="cap">Page: Pioneer JK Advait Senior Living · Meta Ad Library, 13 Oct 2026</p>
+            <div style="margin-top:8px">
+              <div class="claim"><i class="k">✓</i><div><b>"164 residences. 50 units remaining."</b><span>Real scarcity, stated plainly. Keep it, and keep it current.</span></div></div>
+              <div class="claim"><i class="k">✓</i><div><b>"Nirvana Country has always held its value."</b><span>Speaks to the township's own residents, the core buyer.</span></div></div>
+              <div class="claim"><i class="x">✕</i><div><b>"24/7 Fortis-backed healthcare on-site"</b><span>The Fortis agreement isn't published. The workbook says don't advertise it until it is.</span></div></div>
+              <div class="claim"><i class="x">✕</i><div><b>"Possession begins December 2026"</b><span>December is the expected OC. Keys are March 2027, and the RERA record still says 2028.</span></div></div>
+              <div class="claim"><i class="x">✕</i><div><b>"India's First RERA Senior Living"</b><span>Only "Haryana's first licensed under its retirement-housing policy" is supported.</span></div></div>
+            </div></div>
+          <div class="card"><h3>Search and the name</h3>
+            <div class="bars" style="margin-top:12px">
+              <div class="br"><span>Antara · Google ads, 30 days</span><div class="tr"><i style="width:100%;background:var(--senior)"></i></div><span class="val">22</span></div>
+              <div class="br me"><span>Advait · Google ads, 30 days</span><div class="tr"><i style="width:18%"></i></div><span class="val">4</span></div>
+              <div class="br"><span>"antara senior care" searches/mo</span><div class="tr"><i style="width:100%;background:var(--senior)"></i></div><span class="val">2,900</span></div>
+              <div class="br zero"><span><b>"advait senior living" searches/mo</b></span><div class="tr"></div><span class="val">too low</span></div>
+            </div>
+            <div class="call bad" style="margin-top:14px"><b>Name clash:</b> "Advait Living – Medchal", a Hyderabad senior-villa project, is running "Ready to Move in Retirement Homes" ads under the same name right now. Use "Advait, Nirvana Country" everywhere.</div></div>
+        </div>
+      </div>
+      <p class="src">Meta Ad Library live ads, 13 Oct 2026: India ("senior living", "senior living gurugram", "Advait senior living"), US and UAE ("senior living india"). Google Ads Transparency Centre, India, last 30 days: antaraseniorcare.com 22 ads; advaitseniorliving.in 4 ads. Antara marketing: MediaNews4U, 5 Nov 2025; Impact, Sep 2025 and Jul 2026. Lamose: press releases Sep 2026; HARERA; listing prices directional. Vedaanta: TheRealtyToday, May 2026. Colliers–Primus: Outlook Money, Sep 2026. Claim checks against the Advait workbook's claims-compliance and "never say" sheets.</p>
+    </div>
+
+    <!-- 4 BUYERS -->
+    <div class="panel" role="tabpanel" id="p-buyers" data-tab="buyers" data-name="Buyers" hidden>
+      <div class="sec">
+        <span class="tag c">C · The buyers</span>
+        <h2>Seven buyer groups, ranked.</h2>
+        <div class="card">
+          <div class="seg-h"><span></span><span>Who</span><span>Where we find them</span><span>First move</span></div>
+          <div id="segs"></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><b style="color:var(--bad);font-size:14px">Don't pay for:</b><span class="chip no">Investors (55+ resale only)</span><span class="chip no">First-home buyers</span><span class="chip no">Pension-only, no family behind them</span><span class="chip no">Care needed within weeks (refer to home care)</span></div>
+      </div>
+      <div class="sec">
+        <h2>Six families. One gate.</h2>
+        <div class="card" style="overflow-x:auto"><table class="mx" id="mx"></table>
+          <div class="legend"><span><i class="wd w2" style="width:12px;height:12px"></i>weighs most</span><span><i class="wd w1" style="width:10px;height:10px"></i>weighs</span><span><i class="wd w0"></i>minor</span></div></div>
+      </div>
+      <div class="sec">
+        <h2>What closes them.</h2>
+        <div class="g2">
+          <div class="card" id="pains"></div>
+          <div style="display:grid;gap:12px;align-content:start">
+            <div class="banner"><div class="big" style="font-size:30px">4 of 6</div><p>families weigh <b>care</b> most. Two weigh the hospital, two the township, two the monthly charge.</p></div>
+            <div class="card"><h3>The first call: four questions</h3><ol style="margin:10px 0 0 18px;font-size:14px;line-height:1.7;color:var(--ink-2)"><li>Who will live here, and is one resident 55+?</li><li>Live-in attendant, or day help?</li><li>Where does the nearest child live?</li><li>Can the family fund ₹1.1–1.2 Cr in 45 days and the rest by March 2027?</li></ol></div>
+            <div class="call ok"><b>What closes them:</b> the parents' own visit to the site and to CK Birla, with the service charge, the age rule, the Fortis scope and the care pathway in writing, and the RERA number.</div>
+          </div>
+        </div>
+      </div>
+      <p class="src">Advait Buyer Intelligence Workbook: Sheets 06 Personas, 08 Target Sourcing, 09–10 Demand, 11 Action Priorities (Oct 2026), re-weighted with the company's disclosed buyer mix (TheRealtyToday, Jun 2025). Need cards and pain-to-strength from the Advait visual summary.</p>
+    </div>
+
+    <!-- 5 PLAN -->
+    <div class="panel" role="tabpanel" id="p-plan" data-tab="plan" data-name="Plan of action" hidden>
+      <div class="sec">
+        <span class="tag d">D · Plan of action</span>
+        <h2>Six months, four phases, one scoreboard: site visits.</h2>
+        <div class="phases">
+          <div class="ph p0"><div class="when">15 – 31 OCT</div><h4>Fix it before you spend</h4><ul>
+            <li><b>Publish the service-charge schedule</b>, the single biggest objection</li>
+            <li><b>Publish the Fortis service scope</b> and care-escalation policy</li>
+            <li>File the March 2027 date on HARERA; issue a channel fact sheet</li>
+            <li>Correct live ad claims; brand search on "Advait Nirvana Country"</li>
+            <li>CRM, WhatsApp and site-visit tracking live</li></ul></div>
+          <div class="ph p1"><div class="when">NOV – MID DEC</div><h4>Build the engines</h4><ul>
+            <li><b>Diwali, 8 Nov:</b> visiting NRI families see the show apartment</li>
+            <li>Local seniors: print, WhatsApp, Nirvana Country residents' evening</li>
+            <li>Google on care-intent search; Meta in Gurugram and South/West Delhi</li>
+            <li><b>NRI webinars</b> by time zone (US, UK, UAE, Singapore) with a geriatrician</li>
+            <li>Sign the CK Birla referral MoU</li></ul></div>
+          <div class="ph p2"><div class="when">MID DEC – JAN</div><h4>Sell the OC</h4><ul>
+            <li><b>OC open day for founding residents</b>: re-approach every past enquiry</li>
+            <li>NRI winter visits: book the parents' visit and a CK Birla walk-through</li>
+            <li>Pravasi Bharatiya Divas, 9 Jan: diaspora push</li>
+            <li>"A day at Advait": an experience day before the cheque</li></ul></div>
+          <div class="ph p3"><div class="when">FEB – MAR 2027</div><h4>Keys and referrals</h4><ul>
+            <li><b>"Move in before summer"</b> as keys arrive in March</li>
+            <li>New-owner referral programme: 30–50% of senior move-ins come this way</li>
+            <li>Resident stories, filmed at move-in</li>
+            <li>Re-plan Q1 FY28 on cost per site visit</li></ul></div>
+        </div>
+        <div class="strip"><b>Runs throughout:</b> Fixit runs the ads, builds the creative, optimises for site visits instead of leads, and follows up every enquiry within minutes. The promoter gets one page every Monday: spend, site visits, cost per visit, bookings.</div>
+      </div>
+      <div class="sec">
+        <h2>Five documents clear 46% of the red-flag risk.</h2>
+        <div class="card">
+          <div class="fix" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:0"><span>Buyer concern</span><span style="text-align:center">Risk</span><span>Fix · owner</span></div>
+          <div class="fix"><span><b>Monthly service charge unpublished</b></span><span class="rs r">25</span><span class="ow">Publish the schedule before any figure is quoted. Market: ₹15–30k a month, premium ₹25–50k+ · Pioneer</span></div>
+          <div class="fix"><span><b>Fortis support terms unseen</b></span><span class="rs r">16</span><span class="ow">Publish the service-scope summary · Pioneer + Fortis</span></div>
+          <div class="fix"><span><b>RERA record still says Dec 2028</b></span><span class="rs a">12</span><span class="ow">File the revised date; show the latest quarterly report · Pioneer</span></div>
+          <div class="fix"><span><b>Channels advertise wrong facts</b></span><span class="rs a">12</span><span class="ow">One fact sheet for every partner and every ad · Fixit</span></div>
+          <div class="fix"><span><b>What happens when independent living ends?</b></span><span class="rs a">12</span><span class="ow">Publish the care-escalation policy · Pioneer + Fortis</span></div>
+        </div>
+        <div class="call" style="background:var(--surface-2)">Three red flags can't be rewritten: earlier projects delivered late (Araya possession came 2+ years late), 55+-only resale, and no senior-care operating record. They're handled in the room with the escrowed LLP structure, an inheritance note in writing, and a named care team. Expect one more: operators say communities under 150–200 homes are hard to run. Answer it with the published service charge and the Fortis agreement.</div>
+      </div>
+      <p class="src">Risk scores (severity × likelihood, out of 25) from the Advait workbook, Sheet 15. Service-fee range and community-size view: Business Today, 27 Sep and 1 Oct 2026. Araya delays: HRERA orders 2018–21. Calendar: Diwali 8 Nov 2026; NRI winter visits mid-Dec to mid-Jan; Pravasi Bharatiya Divas 9 Jan; OC expected Dec 2026 and keys Mar 2027 (owner-stated). Referral share: Colliers–Primus, Sep 2026.</p>
+    </div>
+
+    <!-- 6 BUDGET -->
+    <div class="panel" role="tabpanel" id="p-budget" data-tab="budget" data-name="Budget" hidden>
+      <div class="sec">
+        <span class="tag d">E · Budget</span>
+        <h2>₹1.32 Cr over two quarters. Under 1% of the stock it sells.</h2>
+        <div class="g4">
+          <div class="tile"><div class="v">₹60 L</div><p>this quarter, 15 Oct – 31 Dec (11 weeks)</p></div>
+          <div class="tile"><div class="v">₹72 L</div><p>next quarter, Jan – Mar 2027, with the OC in hand</p></div>
+          <div class="tile ok"><div class="v">0.73%</div><p>of the ~₹181 Cr of homes left</p></div>
+          <div class="tile"><div class="v">₹7–11 L</div><p>a channel partner's 2–3% brokerage on one ₹3.62 Cr home</p></div>
+        </div>
+        <div class="card" style="overflow-x:auto">
+          <table class="bt" id="btable"></table>
+          <div class="lbl" style="margin-top:16px">Split · two quarters</div>
+          <div class="bstack" id="bstack"></div>
+        </div>
+      </div>
+      <div class="sec">
+        <h2>Why the money goes where it goes.</h2>
+        <div class="g3">
+          <div class="card" style="border-top:3px solid var(--good)"><h3>Local first</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">About 65% of buyers so far live in Gurugram. Meta in Gurugram and South/West Delhi, plus print and WhatsApp for seniors who trust the newspaper, take ~42% of the budget.</p></div>
+          <div class="card" style="border-top:3px solid var(--blue)"><h3>NRI is a test that can scale</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">NRI cost per lead ranges ₹3,300–13,200 between vendors. We start at ₹12 L, read cost per site visit after four weeks, then scale or cut.</p></div>
+          <div class="card" style="border-top:3px solid var(--senior)"><h3>Referrals cost least</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">Events, the CK Birla MoU and an owner-referral programme take ~14%. They should deliver a quarter or more of bookings.</p></div>
+        </div>
+      </div>
+      <p class="src">Budget excludes Fixit's fee and channel-partner brokerage. Reallocated weekly inside the approved total on cost per site visit. Brokerage benchmark 2–3% for luxury (vendor sources); marketing spend rule of thumb 1–3% of sales value (unaudited). Remaining stock value at the weighted price list.</p>
+    </div>
+
+    <!-- 7 FUNNEL -->
+    <div class="panel" role="tabpanel" id="p-funnel" data-tab="funnel" data-name="Funnel & forecast" hidden>
+      <div class="sec">
+        <span class="tag d">F · Funnel and forecast</span>
+        <h2>What the money turns into, quarter by quarter.</h2>
+        <div class="ctrl">
+          <div class="seg-btn" role="group" aria-label="Scenario"><button type="button" data-sc="conservative" aria-pressed="true">Conservative</button><button type="button" data-sc="base" aria-pressed="false">Base</button></div>
+          <div class="seg-btn" role="group" aria-label="Quarter"><button type="button" data-q="0" aria-pressed="true">This quarter · Oct–Dec</button><button type="button" data-q="1" aria-pressed="false">Next quarter · Jan–Mar</button></div>
+        </div>
+        <div class="res" id="res"></div>
+        <div class="g2" style="grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)">
+          <div class="card"><h3>The funnel</h3><p class="cap" id="fcap"></p><div class="funnel" id="funnel" style="margin-top:12px"></div></div>
+          <div class="card"><h3>Homes left</h3><p class="cap">Each square is one of the ~50 homes · after both quarters, this scenario</p><div class="units" id="units"></div>
+            <div class="legend" style="margin-top:12px"><span><i style="background:var(--good)"></i>Booked this quarter</span><span><i style="background:var(--blue)"></i>Booked next quarter</span><span><i style="background:var(--track)"></i>Still to sell</span></div>
+            <p class="cap" id="ucap" style="margin-top:10px"></p></div>
+        </div>
+        <div class="card" style="overflow-x:auto"><h3>By channel</h3><table class="bt" id="ctable" style="margin-top:10px"></table></div>
+      </div>
+      <div class="sec">
+        <h2>The assumptions, and where they come from.</h2>
+        <div class="card" style="overflow-x:auto">
+          <table class="bt bench"><thead><tr><th>Assumption</th><th class="n">Conservative</th><th class="n">Base</th><th>Market range</th></tr></thead><tbody id="atable"></tbody></table>
+        </div>
+        <div class="call" style="background:var(--surface-2)">Conservative means the top of the cost ranges and the bottom of the conversion ranges, and only 65% of a quarter's bookings landing in that quarter. Senior-living decisions involve the parents and the children, so they run longer than the 15–30 days ANAROCK reports for ordinary homes. These are bookings sourced by this plan; channel-partner sales come on top.</div>
+      </div>
+      <p class="src">Benchmarks: Meta cost per lead for luxury NCR ₹800–2,500 and Google ₹2,000–5,000 (Aarmus 2026; Leadproio Jul 2026); NRI Meta ₹3,300–13,200 (Aarmus, single vendor, to be tested); lead to site visit 8–15% and site visit to booking 10–25% (Upgrowth; Realatic Apr 2026; Leadproio); lead to booking ~1.3% (ANAROCK, derived). Average ticket ₹3.62 Cr at the weighted price list. Directional; replaced with Advait's CRM data in week 2.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+  const $=s=>document.querySelector(s), css=v=>`var(--${v})`;
+  const AVG=3.62, UNITS=50;
+
+  /* tabs */
+  const panels=[...document.querySelectorAll('.panel')], tl=$('#tablist');
+  panels.forEach((p,i)=>{const b=document.createElement('button');b.className='tab';b.type='button';b.setAttribute('role','tab');b.id='t-'+p.dataset.tab;b.setAttribute('aria-controls',p.id);b.dataset.tab=p.dataset.tab;b.innerHTML=`<span class="n">0${i+1}</span>${p.dataset.name}`;b.addEventListener('click',()=>show(p.dataset.tab,true));tl.appendChild(b);});
+  tl.addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft'].includes(e.key))return;const t=[...tl.children],i=t.findIndex(x=>x.getAttribute('aria-selected')==='true');const n=t[(i+(e.key==='ArrowRight'?1:-1)+t.length)%t.length];n.focus();show(n.dataset.tab,true);});
+  function show(id,scroll){panels.forEach(p=>p.hidden=p.dataset.tab!==id);[...tl.children].forEach(t=>{const on=t.dataset.tab===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;if(on&&scroll)t.scrollIntoView({block:'nearest',inline:'center'});});try{history.replaceState(null,'','#'+id)}catch(e){}requestAnimationFrame(()=>placers.forEach(f=>f()));if(scroll){const top=$('#dash').getBoundingClientRect().top+window.scrollY;if(window.scrollY>top)window.scrollTo({top});}}
+
+  /* jumps */
+  const J=[['market','Market','Gurugram just proved the category. Advait is the only licensed senior home in Gurugram with keys before 2030.','var(--good)'],['compete','Competitors','Antara is loudest. Nobody in NCR talks to NRI children. Advait\'s own ads barely run.','var(--bad)'],['buyers','Buyers','Local seniors are the core; children and NRIs are the growth. Four of six families weigh care most.','#9A6B12'],['plan','Plan of action','Fix, build, sell the OC, then keys and referrals. Five documents clear 46% of red-flag risk.','var(--blue)'],['budget','Budget','₹1.32 Cr over two quarters, under 1% of the stock it sells.','var(--senior)'],['funnel','Funnel & forecast','Conservative: ~19 bookings by March. Switch to base, or to either quarter.','var(--ink)']];
+  $('#jumps').innerHTML=J.map(([id,t,p,c])=>`<button class="jump" type="button" data-go="${id}" style="--jc:${c}"><span class="t">${t}<span>Open →</span></span><p>${p}</p></button>`).join('');
+  document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go,true)));
+
+  /* search bars */
+  const S=[['antara senior care',2900,'senior'],['antara senior living',2400,'senior'],['old age home gurgaon',1600,'good'],['senior citizen homes (India)',1600,'grey'],['retirement homes in india',320,'grey'],['senior citizen home gurgaon',260,'good'],['senior living gurgaon',0,''],['advait senior living',0,'']];
+  $('#b-search').innerHTML=S.map(([k,v,c])=>v?`<div class="br"><span>${k}</span><div class="tr"><i style="width:${v/2900*100}%;background:${css(c)}"></i></div><span class="val">${v.toLocaleString('en-IN')}</span></div>`:`<div class="br zero"><span><b>${k}</b></span><div class="tr"></div><span class="val">too low</span></div>`).join('');
+
+  /* supply timeline: [name, sub, start(yr dec), keys(yr dec), status: ready|due|build, est?] */
+  const SUP=window.__SUP||[
+    ['Advait · Pioneer × J K','Sector 50 · 164 homes · licensed',2025.27,2027.2,'due',false],
+    ['Antara Noida','Noida, across NCR · 340 homes',2020.2,2026.4,'ready',false,'Ready, Noida'],
+    ['Silverglades First Citizen','Sohna · running, not policy-licensed',2014.5,2019.0,'ready',true,'Running, Sohna'],
+    ['JMS Silver Living','Sector 95 · 236 homes · licensed',2025.3,2030.45,'build',true],
+    ['Antara · Estate 360','Sector 36A · 292 homes, sold out',2024.65,2030.6,'build',true],
+    ['Lamose Gratitude 84','Sector 84 · multigenerational',2026.7,2030.9,'build',true],
+    ['Antara · Estate 361','Sector 36A · 206 of 360 unsold (Jun 2026)',2025.92,2033.7,'build',true],
+    ['DLF The Aureva','Sector 63 · 172 homes, sold out',2026.6,2033.83,'build',true],
+  ];
+  (function(){
+    const lo=2024,hi=2034, pct=y=>(y-lo)/(hi-lo)*100;
+    let h=`<div class="tl2" style="position:relative">`;
+    h+=`<div class="window" style="left:calc(220px + 14px + (100% - 234px) * ${pct(2027.2)/100});width:calc((100% - 234px) * ${(pct(2030.4)-pct(2027.2))/100})"><span>Advait's window in Gurugram</span></div>`;
+    SUP.forEach(([n,s,a,k,st,est,rl])=>{
+      const now=2026.79;
+      let bars='';
+      if(st==='ready'){bars=`<span class="ready" style="left:${pct(Math.max(k,lo))}%;right:0"></span><span class="lab" style="left:${pct(Math.max(k,lo))+1}%;top:-13px;font-size:11px;color:var(--good)">${rl||'Ready'}</span>`;}
+      else{const L=pct(Math.max(a,lo)),W=pct(k)-L;bars=`<span class="bar build" style="left:${L}%;width:${W}%"></span><span class="key" style="left:${pct(k)}%;background:${st==='due'?css('good'):css('senior')}">${st==='due'?'✓':''}</span><span class="lab" style="${pct(k)>82?`right:${100-pct(k)+1.6}%`:`left:${pct(k)+1.6}%`};color:${st==='due'?css('good'):css('senior')}">${st==='due'?'Keys Mar 2027':'Keys ~'+Math.floor(k)+(est?' (est.)':'')}</span>`;}
+      h+=`<div class="row"><div class="nm"><b>${n}</b><span>${s}</span></div><div class="tr">${bars}</div></div>`;
+    });
+    h+=`<div class="years"><div></div><div class="t">${Array.from({length:hi-lo+1},(_,i)=>lo+i).map((y,i,a)=>`<span style="left:${pct(y)}%;${i===a.length-1?'transform:translateX(-100%)':''}">${y}</span>`).join('')}</div></div>`;
+    h+=`<div class="now" style="left:calc(220px + 14px + (100% - 234px) * ${pct(2026.79)/100})"><span>Today</span></div></div>`;
+    $('#supply').innerHTML=h;
+  })();
+
+  /* price ladder (reuse classes) */
+  const placers=[];
+  function ladder(el,dom,groups,mark,step,markAt){
+    const [lo,hi]=dom,pct=v=>(v-lo)/(hi-lo)*100;let h='';
+    groups.forEach(g=>{h+=`<div class="lrow"><div class="g"><b>${g[0]}</b><span>${g[1]}</span></div><div class="lt">`;g[2].forEach(([name,a,b,col])=>{const L=pct(a),W=b?pct(b)-pct(a):0,lab=b?`₹${a.toFixed(1)}–${b.toFixed(1)}k`:`₹${a.toFixed(1)}k`;const tx=(b?pct(b):pct(a))+1.4,right=tx>66;h+=`<div class="it">${b?`<span class="m" style="left:${L}%;width:${W}%;background:${css(col)}"></span>`:`<span class="m dot" style="left:${L}%;background:${css(col)}"></span>`}<span class="t" style="${right?`right:${100-(L-1.4)}%`:`left:${tx}%`}"><b>${name}</b> ${lab}</span></div>`;});h+=`</div></div>`;});
+    const ticks=[];for(let v=lo;v<=hi+.01;v+=step)ticks.push(v);
+    h+=`<div class="axisx"><div></div><div class="ticks">${ticks.map((v,k)=>`<span style="left:${pct(v)}%;${k===ticks.length-1?'transform:translateX(-100%)':''}">₹${Math.round(v)}k</span>`).join('')}</div></div>`;
+    el.innerHTML=`<div class="ladder">${h}</div>`;
+    const lad=el.querySelector('.ladder'),lt=el.querySelector('.lt'),line=document.createElement('div');line.className='e361';line.innerHTML=`<span>${mark}</span>`;lad.appendChild(line);
+    const place=()=>{const L=lt.getBoundingClientRect(),P=lad.getBoundingClientRect();if(!L.width)return;line.style.left=(L.left-P.left+L.width*pct(markAt)/100)+'px';const rows=lad.querySelectorAll('.lrow');line.style.bottom=(P.bottom-rows[rows.length-1].getBoundingClientRect().bottom)+'px';};
+    place();window.addEventListener('resize',place);return place;
+  }
+  placers.push(ladder($('#ladder'),[8,32],[
+    ['The same township','Nirvana Country flats today',[['Nirvana Country flats',15.9,17.1,'grey'],['The Close / Fresco median',17.3,0,'grey']]],
+    ['Senior homes, ready','What residents can buy now',[['Silverglades First Citizen, Sohna',10.2,0,'good'],['Antara Noida (resale)',17.8,0,'good']]],
+    ['Senior launches','What families choose between',[['JMS Silver Living, Sec 95',9.5,10.0,'senior'],['WAL Pravah (not age-restricted)',11.0,12.0,'senior'],['Antara · Estate 361',22.5,0,'senior'],['Antara @ Estate 360',23.9,0,'senior']]],
+    ['Stronger market','Golf Course Extension Road',[['DLF The Aureva, Sec 63',28.0,32.0,'grey']]],
+  ],'Advait BSP ₹18,500',4,18.5));
+
+  /* segments */
+  const SEG=[
+    ['Local seniors 60–80, buying for themselves','Nirvana Country, South City II, Sohna Rd, Sushant Lok · ~65% of buyers so far','Print + WhatsApp, residents\' evenings, Meta in a 5 km radius','OC open day for founding residents','good','Core'],
+    ['Gurugram children buying for parents','GCER, Cyber City, Sohna Rd offices · income ₹1–5 Cr','Meta + Google care search, corporate HR wellness desks','"Parents\' care evening" with a geriatrician','blue','Growth'],
+    ['NRI children abroad','US, UAE, UK, Singapore, Canada · parents in NCR','Meta + YouTube in-geo, time-zone webinars, wealth managers','Webinar with the Fortis lead; Dec–Jan parent visits','blue','Growth'],
+    ['South & West Delhi seniors and their children','GK, Vasant Vihar, Janakpuri, Punjabi Bagh','Meta + Delhi print editions, "near your children" message','Weekend site-visit shuttles','good','Core'],
+    ['Hospital referrals','CK Birla (0.19 km), Medanta, Artemis discharge & physio teams','Referral MoU, patient-relations desks','Sign the CK Birla MoU','senior','Referral'],
+    ['Returning NRI retirees','Canada, UAE · roots and return','Overseas Indian associations, property expos','Dated possession pack for returnees','blue','Growth'],
+    ['Parents via J K and Pioneer networks','Kanpur, Lucknow, Kolkata; Pioneer owners (one-to-one only)','Introductions, never bulk mail','Senior sales, named names only','senior','Referral'],
+  ];
+  $('#segs').innerHTML=SEG.map(([w,s,ch,f,c,t],i)=>`<div class="seg"><span class="rk" style="background:${css(c)}">${i+1}</span><div><b>${w}</b><span class="sz">${s}</span><br><span class="tagx" style="background:${c==='good'?'var(--good-soft)':c==='blue'?'var(--blue-soft)':'var(--senior-soft)'};color:${css(c==='blue'?'blue':c)}">${t}</span></div><div>${ch}</div><div>${f}</div></div>`).join('');
+
+  /* families */
+  const F=[['The NRI child','Live now','45–55 · parent in South City II','Type B/C','Who answers at 3 a.m.?',[2,2,0,1,0,1],'p4'],['The Nirvana Country couple','Re-approach','72 / 68 · three-storey floor','Type A','"We lose 600 sq ft"',[1,1,2,2,2,1],'p2'],['The child in Gurugram','Live now','40–55 · parent in Kanpur / Lucknow','Type B/C','What does it cost every month?',[2,1,0,2,1,1],'p3'],['The widowed parent','Re-approach','77 · alone in a Close South flat','Type B','Will there be company?',[2,1,2,1,0,0],'p1'],['The returning NRI couple','Live now','66 / 63 · Toronto','Type A','Is the OC really December?',[1,1,1,0,2,2],'p5'],['The retired doctor','Live now','74 · Medanta network','Type A','"Show me the licence"',[2,2,0,0,1,0],'p6']];
+  $('#mx').innerHTML=`<thead><tr><th>Who they are</th><th>First doubt</th>${['Care','Hospital','Township','Monthly','Plan','Timing'].map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>`+F.map((f,i)=>`<tr><td><div class="fam"><span class="ic" style="background:${css(f[6])}">${i+1}</span><div><b>${f[0]}</b><span class="pill ${f[1]!=='Live now'?'w':''}">${f[1]}</span><small>${f[2]} · <em>${f[3]}</em></small></div></div></td><td class="doubt">? ${f[4]}</td>${f[5].map(w=>`<td><span class="wd w${w}"></span></td>`).join('')}</tr>`).join('')+`</tbody>`;
+  const P=[[[1,4],'A fall at home, found hours later','Caretaker suite + medical room on site','Fortis terms not yet in writing'],[[2],'Stairs in a three-storey floor','One level, two lifts + a service lift','carpet ~600 sq ft smaller'],[[4],'Alone in a big flat','164 neighbours of the same age + a 35,000 sq ft club','club ₹7 L + tax at keys'],[[1,6],'The hospital is a traffic jam away','CK Birla 3 min on foot · Medanta 10 min','drive times estimated'],[[3],'Every repair runs through the child','On-site facilities team + housekeeping','service charge unpublished'],[[3,5],'"Isn\'t a care home cheaper?"','Own title · own door · pass it on','on cost alone, yes']];
+  $('#pains').innerHTML=`<div class="lbl" style="display:flex;justify-content:space-between;margin-bottom:6px"><span>Pain today → the strength that answers it</span><span>Honest limit</span></div>`+P.map(([n,p,s,l])=>`<div class="ps" style="grid-template-columns:52px minmax(0,1fr) minmax(0,1fr)"><div class="nums">${n.map(k=>`<i style="background:${css('p'+k)}">${k}</i>`).join('')}</div><div class="pain">${p}</div><div class="str">✓ ${s}<div style="font-weight:400;font-size:12px;color:var(--muted);margin-top:3px">⚠ ${l}</div></div></div>`).join('');
+
+  /* ---------- budget + funnel model ---------- */
+  const CH=[
+    {k:'meta',n:'Meta · Gurugram & Delhi',d:'Seniors and their children, 5–25 km radius and South/West Delhi',col:'good',b:[16,20],paid:'meta'},
+    {k:'google',n:'Google Search · care intent',d:'"old age home gurgaon", senior citizen homes, brand defence',col:'blue',b:[10,12],paid:'google'},
+    {k:'nri',n:'Meta + YouTube · NRI children',d:'US, UAE, UK, Singapore, Canada; time-zone webinars',col:'cyanx',b:[12,16],paid:'nri'},
+    {k:'print',n:'Print + WhatsApp · local seniors',d:'Gurugram and Delhi editions, residents\' groups, chemists & clinics',col:'senior',b:[6,7],off:[90,110]},
+    {k:'ref',n:'Referrals & events',d:'CK Birla MoU, residents\' evenings, OC open day, owner referrals',col:'p6',b:[8,10],off:[45,60]},
+    {k:'content',n:'Content, CRM & retargeting',d:'Walk-through and care-desk films, service-charge explainer, WhatsApp CRM',col:'p2',b:[8,7]},
+  ];
+  const SC={
+    conservative:{cpl:{meta:2500,google:4500,nri:7000},lq:.20,qv:.30,vb:[.10,.12],pr:[.40,.35,[.12,.14]],rf:[.55,.45,[.18,.22]],close:.65},
+    base:{cpl:{meta:2000,google:4000,nri:6000},lq:.22,qv:.33,vb:[.11,.13],pr:[.42,.38,[.13,.15]],rf:[.58,.48,[.20,.24]],close:.70},
+  };
+  const colOf=c=>c==='cyanx'?'#0E7490':css(c);
+  function run(sn){
+    const s=SC[sn];let carry=0;const out=[];
+    [0,1].forEach(q=>{
+      const rows=CH.map(c=>{let l=0,ql=0,v=0,b=0;
+        if(c.paid){l=c.b[q]*1e5/s.cpl[c.paid];ql=l*s.lq;v=ql*s.qv;b=v*s.vb[q];}
+        else if(c.off){const r=c.k==='print'?s.pr:s.rf;l=c.off[q];ql=l*r[0];v=ql*r[1];b=v*r[2][q];}
+        return {c,spend:c.b[q],l,ql,v,b};});
+      const T=rows.reduce((a,r)=>({spend:a.spend+r.spend,l:a.l+r.l,ql:a.ql+r.ql,v:a.v+r.v,b:a.b+r.b}),{spend:0,l:0,ql:0,v:0,b:0});
+      const closed=T.b*s.close+carry; carry=T.b*(1-s.close);
+      out.push({rows,T,closed,carryOut:carry});
+    });
+    return out;
+  }
+  /* budget table */
+  (function(){
+    const t1=CH.reduce((a,c)=>a+c.b[0],0),t2=CH.reduce((a,c)=>a+c.b[1],0);
+    $('#btable').innerHTML=`<thead><tr><th>Channel</th><th class="n">Oct–Dec</th><th class="n">Jan–Mar</th><th class="n">Total</th><th class="n">Share</th></tr></thead><tbody>`+
+      CH.map(c=>`<tr><td><span class="sw" style="background:${colOf(c.col)}"></span><b>${c.n}</b><small>${c.d}</small></td><td class="n">₹${c.b[0]} L</td><td class="n">₹${c.b[1]} L</td><td class="n">₹${c.b[0]+c.b[1]} L</td><td class="n">${Math.round((c.b[0]+c.b[1])/(t1+t2)*100)}%</td></tr>`).join('')+
+      `<tr class="tot"><td>Total</td><td class="n">₹${t1} L</td><td class="n">₹${t2} L</td><td class="n">₹${(t1+t2)/100} Cr</td><td class="n">100%</td></tr></tbody>`;
+    $('#bstack').innerHTML=CH.map(c=>{const p=(c.b[0]+c.b[1])/(t1+t2)*100;return `<div style="flex:0 0 calc(${p}% - 2px);background:${colOf(c.col)}" title="${c.n}">${p>=9?Math.round(p)+'%':''}</div>`}).join('');
+  })();
+  /* assumptions table */
+  const A=[['Meta cost per lead · India','₹2,500','₹2,000','₹800–2,500 luxury NCR'],['Google cost per lead','₹4,500','₹4,000','₹2,000–5,000 Gurgaon luxury'],['NRI cost per lead (Meta/YouTube)','₹7,000','₹6,000','₹3,300–13,200 UAE (to test)'],['Lead → qualified','20%','22%','—'],['Qualified → site visit','30%','33%','lead → visit 8–15%'],['Site visit → booking (Oct–Dec / Jan–Mar)','10% / 12%','11% / 13%','10–25%'],['Referral visit → booking','18% / 22%','20% / 24%','referral leads convert 8–15% end to end'],['Share of bookings closing in the same quarter','65%','70%','senior-living cycles run long'],['Average ticket','₹3.62 Cr','₹3.62 Cr','weighted price list']];
+  $('#atable').innerHTML=A.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td><td class="n">${r[2]}</td><td style="color:var(--muted)">${r[3]}</td></tr>`).join('');
+
+  let SCN='conservative',QI=0;
+  const fmt=x=>Math.round(x).toLocaleString('en-IN');
+  function render(){
+    const R=run(SCN),q=R[QI],T=q.T;
+    const two=R[0].closed+R[1].closed, spend=R[0].T.spend+R[1].T.spend;
+    $('#res').innerHTML=[
+      ['Spend',`₹${T.spend} L`,QI?'Jan–Mar 2027':'15 Oct – 31 Dec'],
+      ['Site visits',fmt(T.v),`from ${fmt(T.l)} enquiries`],
+      ['Bookings closed',`${Math.round(q.closed)}`,`≈ ₹${Math.round(q.closed*AVG)} Cr${QI?' incl. carry-over':''}`],
+      ['Cost per booking',`₹${(T.spend/q.closed).toFixed(1)} L`,`${(T.spend/q.closed/(AVG*100)*100).toFixed(1)}% of the ticket`],
+    ].map(([k,v,s],i)=>`<div class="fc" style="border-top-color:${['var(--senior)','var(--blue)','var(--good)','var(--ink)'][i]}"><div class="q">${k}</div><div class="v">${v}</div><p>${s}</p></div>`).join('');
+    const st=[['Enquiries','all channels',T.l,'#18181B'],['Qualified','reachable, 55+ resident, budget fits',T.ql,'#2563EB'],['Site visits','incl. parents visiting for NRI children',T.v,'#B8730A'],['Bookings','generated this quarter',T.b,'#0F8A64']];
+    const max=T.l;
+    $('#funnel').innerHTML=st.map(([n,s,v,c],i)=>`<div class="fs"><div class="lb">${n}<small>${s}</small></div><div><div class="bx" style="width:${Math.max(v/max*100,7)}%;background:${c}">${v<10?v.toFixed(1):fmt(v)}</div></div><div class="rt">${i?(v/st[i-1][2]*100).toFixed(0)+'% of above':''}</div></div>`).join('');
+    $('#fcap').textContent=`${SCN==='conservative'?'Conservative':'Base'} case · ${QI?'next quarter, Jan–Mar 2027':'this quarter, 15 Oct – 31 Dec'} · ${q.closed.toFixed(1)} close in-quarter${QI?' (incl. carry-over)':''}, ${q.carryOut.toFixed(1)} carry forward`;
+    const b1=Math.round(R[0].closed),b2=Math.round(R[1].closed);
+    $('#units').innerHTML=Array.from({length:UNITS},(_,i)=>`<i style="background:${i<b1?css('good'):i<b1+b2?css('blue'):css('track')}"></i>`).join('');
+    $('#ucap').textContent=`${b1} + ${b2} = ${b1+b2} homes booked by March 2027 on ₹${spend/100} Cr; ~${UNITS-b1-b2} left, with ~${Math.round(R[1].carryOut)} more already in the pipeline.`;
+    $('#ctable').innerHTML=`<thead><tr><th>Channel</th><th class="n">Spend</th><th class="n">Enquiries</th><th class="n">Site visits</th><th class="n">Bookings</th><th class="n">Cost / visit</th></tr></thead><tbody>`+
+      q.rows.filter(r=>r.l>0).map(r=>`<tr><td><span class="sw" style="background:${colOf(r.c.col)}"></span>${r.c.n}</td><td class="n">₹${r.spend} L</td><td class="n">${fmt(r.l)}</td><td class="n">${r.v.toFixed(0)}</td><td class="n">${r.b.toFixed(1)}</td><td class="n">₹${fmt(r.spend*1e5/r.v)}</td></tr>`).join('')+
+      `<tr class="tot"><td>Total (incl. content & CRM)</td><td class="n">₹${T.spend} L</td><td class="n">${fmt(T.l)}</td><td class="n">${T.v.toFixed(0)}</td><td class="n">${T.b.toFixed(1)}</td><td class="n">₹${fmt(T.spend*1e5/T.v)}</td></tr></tbody>`;
+    if(SCN==='conservative'){ $('#s-q3').innerHTML=`${b1} <small>bookings</small>`; $('#s-q3v').textContent=`≈ ₹${Math.round(R[0].closed*AVG)} Cr booked`; $('#s-q4').innerHTML=`${b2} <small>bookings</small>`; $('#s-q4v').textContent=`≈ ₹${Math.round(R[1].closed*AVG)} Cr booked, with the OC in hand`; const cpb=spend/(R[0].closed+R[1].closed); $('#s-cpb').textContent=`~₹${cpb.toFixed(0)} L`; $('#s-cpbp').textContent=`about ${(cpb/(AVG*100)*100).toFixed(1)}% of the ticket, below a 2–3% channel-partner brokerage`; }
+  }
+  document.querySelectorAll('[data-sc]').forEach(b=>b.addEventListener('click',()=>{SCN=b.dataset.sc;document.querySelectorAll('[data-sc]').forEach(x=>x.setAttribute('aria-pressed',x===b));render();}));
+  document.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{QI=+b.dataset.q;document.querySelectorAll('[data-q]').forEach(x=>x.setAttribute('aria-pressed',x===b));render();}));
+  SCN='conservative';render();
+
+  /* flow */
+  const land=$('#landing'),dash=$('#dash'),go=$('#go'),steps=$('#steps');
+  const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function openDash(tab){land.hidden=true;dash.hidden=false;show(tab||'summary',false);requestAnimationFrame(()=>placers.forEach(f=>f()));window.scrollTo({top:0});}
+  go.addEventListener('click',()=>{go.disabled=true;go.textContent='Analysing Advait…';steps.hidden=false;const lis=[...steps.children],dt=reduce?120:620;let i=0;const tick=()=>{if(i>0){lis[i-1].className='done';lis[i-1].querySelector('.dot').textContent='✓';}if(i<lis.length){lis[i].className='run';i++;setTimeout(tick,dt);}else setTimeout(()=>openDash('summary'),reduce?60:380);};tick();});
+  $('#restart').addEventListener('click',()=>{dash.hidden=true;land.hidden=false;go.disabled=false;go.innerHTML='Analyse Advait <span aria-hidden="true">→</span>';steps.hidden=true;[...steps.children].forEach((li,k)=>{li.className='';li.querySelector('.dot').textContent=k+1;});try{history.replaceState(null,'','#')}catch(e){}window.scrollTo({top:0});});
+  const h=(location.hash||'').slice(1); if(panels.some(p=>p.dataset.tab===h)) openDash(h);
+})();
+</script>
+
+</body>
+</html>
